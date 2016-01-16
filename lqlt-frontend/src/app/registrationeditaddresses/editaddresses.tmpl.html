@@ -1,0 +1,88 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editaddresses" ng-submit="editaddresses.$valid && vm.editaddressesClick()" novalidate>
+            <span class="md-headline" translate>EDIT_ADDRESS.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                <md-input-container flex>
+                      <label for="code" translate>EDIT_ADDRESS.CODE.LABEL</label>
+                      <input id="code" name="code" type="text" ng-model="vm.user.code" required/>
+                        <div ng-messages="editaddresses.code.$error" ng-if="editaddresses.$submitted && editaddresses.code.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ADDRESS.CODE.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="phone" translate>EDIT_ADDRESS.PHONE.LABEL</label>
+                      <input id="phone" name="phone" type="text" ng-model="vm.user.phone" required/>
+                        <div ng-messages="editaddresses.phone.$error" ng-if="editaddresses.$submitted && editaddresses.phone.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ADDRESS.PHONE.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_ADDRESS.STATUS.LABEL</label>
+                    <md-select name="status" ng-model="vm.user.status" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editaddresses.status.$error" ng-if="editaddresses.$submitted && editaddresses.status.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ADDRESS.STATUS.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label translate>EDIT_ADDRESS.DISTRICT.LABEL</label>
+                    <md-select name="district" ng-model="vm.user.district" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editaddresses.district.$error" ng-if="editaddresses.$submitted && editaddresses.district.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ADDRESS.DISTRICT.PLEASE_ENTER</span>
+                            </div>
+                        </div> 
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                <md-input-container flex>
+                      <label for="address1" translate>EDIT_ADDRESS.ADDRESS1.LABEL</label>
+                      <input id="address1" name="address1" type="text" ng-model="vm.user.address1" required/>
+                        <div ng-messages="editaddresses.address1.$error" ng-if="editaddresses.$submitted && editaddresses.address1.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ADDRESS.ADDRESS1.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="address2" translate>EDIT_ADDRESS.ADDRESS2.LABEL</label>
+                      <input id="address2" name="address2" type="text" ng-model="vm.user.address2" required/>
+                        <div ng-messages="editaddresses.address2.$error" ng-if="editaddresses.$submitted && editaddresses.address2.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ADDRESS.ADDRESS2.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_ADDRESS.BUTTON_CANCEL"  aria-label="{{'EDIT_ADDRESS.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_ADDRESS.BUTTON_SIGNUP" aria-label="{{'EDIT_ADDRESS.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

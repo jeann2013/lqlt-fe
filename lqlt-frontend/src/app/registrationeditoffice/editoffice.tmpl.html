@@ -1,0 +1,161 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editoffice" ng-submit="editoffice.$valid && vm.editofficeClick()" novalidate>
+            <span class="md-headline" translate>EDIT_OFFICE.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label for="name" translate>EDIT_OFFICE.NAME.LABEL</label>
+                    <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                      <div ng-messages="editoffice.name.$error" ng-if="editoffice.$submitted && editoffice.name.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_OFFICE.NAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                  <label for="email" translate>EDIT_OFFICE.EMAIL.LABEL</label>
+                  <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
+                  <div ng-messages="editoffice.email.$error" ng-if="editoffice.$submitted && editoffice.email.$invalid">
+                    <div ng-message when="required">
+                      <span translate>EDIT_OFFICE.EMAIL.PLEASE_ENTER</span>
+                    </div>
+                    <div ng-message when="email">
+                      <span translate>EDIT_OFFICE.EMAIL.PLEASE_VALID</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_OFFICE.PROVINCE.LABEL</label>
+                    <md-select name="provice" ng-model="vm.user.provice" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editoffice.provice.$error" ng-if="editoffice.$submitted && editoffice.provice.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_OFFICE.PROVINCE.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label translate>EDIT_OFFICE.DISTRICT.LABEL</label>
+                    <md-select name="district" ng-model="vm.user.district" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editoffice.district.$error" ng-if="editoffice.$submitted && editoffice.district.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_OFFICE.DISTRICT.PLEASE_ENTER</span>
+                            </div>
+                        </div> 
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label translate>EDIT_OFFICE.CORREG.LABEL</label>
+                    <md-select name="correg" ng-model="vm.user.correg" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editoffice.correg.$error" ng-if="editoffice.$submitted && editoffice.correg.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_OFFICE.CORREG.PLEASE_ENTER</span>
+                            </div>
+                        </div>               
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_OFFICE.NEIGHBORHOOD.LABEL</label>
+                    <md-select name="neighborhood" ng-model="vm.user.neighborhood" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editoffice.neighborhood.$error" ng-if="editoffice.$submitted && editoffice.neighborhood.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_OFFICE.NEIGHBORHOOD.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="street" translate>EDIT_OFFICE.STREET.LABEL</label> 
+                    <input id="street" name="street" type="text"  ng-model="vm.user.street" required/>
+                    <div ng-messages="editoffice.street.$error" ng-if="editoffice.$submitted && editoffice.street.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_OFFICE.STREET.PLEASE_ENTER</span>
+                            </div>
+                        </div>  
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="home" translate>EDIT_OFFICE.HOME.LABEL</label> 
+                    <input id="home" name="home" type="text"  ng-model="vm.user.home" required/>
+                    <div ng-messages="editoffice.home.$error" ng-if="editoffice.$submitted && editoffice.home.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_OFFICE.HOME.PLEASE_ENTER</span>
+                            </div>
+                        </div>  
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                    <md-input-container flex>
+                      <label for="ruc" translate>EDIT_OFFICE.RUC.LABEL</label>
+                      <input id="ruc" name="ruc" type="text" ng-model="vm.user.ruc" required/>
+                          <div ng-messages="editoffice.ruc.$error" ng-if="editoffice.$submitted && editoffice.ruc.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_OFFICE.RUC.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container >
+                    <md-input-container flex>
+                      <label for="businessName" translate>EDIT_OFFICE.BUSINESS_NAME.LABEL</label>
+                      <input id="businessName" name="businessName" type="text" ng-model="vm.user.businessName" required/>
+                          <div ng-messages="editoffice.businessName.$error" ng-if="editoffice.$submitted && editoffice.businessName.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_OFFICE.BUSINESS_NAME.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container >
+                    <md-input-container flex>
+                     <label for="dv" translate>EDIT_OFFICE.DV.LABEL</label>
+                      <input id="dv" name="dv" type="text" ng-model="vm.user.dv" required/>
+                          <div ng-messages="editoffice.dv.$error" ng-if="editoffice.$submitted && editoffice.dv.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_OFFICE.DV.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                   
+                    <md-input-container flex>
+                     <label for="coordinate" translate>EDIT_OFFICE.COORDINATES.LABEL</label>
+                      <input id="coordinate" name="coordinate" type="text" ng-model="vm.user.coordinate" required/>
+                          <div ng-messages="editoffice.coordinate.$error" ng-if="editoffice.$submitted && editoffice.coordinate.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_OFFICE.COORDINATES.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label for="contact" translate>EDIT_OFFICE.CONTACT.LABEL</label>
+                        <input id="contact" name="contact" type="text" ng-model="vm.user.contact" required/>
+                          <div ng-messages="editoffice.contact.$error" ng-if="editoffice.$submitted && editoffice.contact.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_OFFICE.CONTACT.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                </div>  
+              </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_OFFICE.BUTTON_CANCEL"  aria-label="{{'EDIT_OFFICE.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_OFFICE.BUTTON_SIGNUP" aria-label="{{'EDIT_OFFICE.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

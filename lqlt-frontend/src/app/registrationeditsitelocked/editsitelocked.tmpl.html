@@ -1,0 +1,43 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editsitelocked" ng-submit="editsitelocked.$valid && vm.editsitelockedClick()" novalidate>
+            <span class="md-headline" translate>EDIT_SITELOCKED.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row">
+                <md-input-container flex>
+                      <label for="name" translate>EDIT_SITELOCKED.NAME.LABEL</label>
+                      <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                        <div ng-messages="editsitelocked.name.$error" ng-if="editsitelocked.$submitted && editsitelocked.name.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_SITELOCKED.NAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="url" translate>EDIT_SITELOCKED.URL.LABEL</label>
+                      <input id="url" name="url" type="text" ng-model="vm.user.url" required/>
+                        <div ng-messages="editsitelocked.url.$error" ng-if="editsitelocked.$submitted && editsitelocked.url.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_SITELOCKED.URL.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_SITELOCKED.BUTTON_CANCEL"  aria-label="{{'EDIT_SITELOCKED.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_SITELOCKED.BUTTON_SIGNUP" aria-label="{{'EDIT_SITELOCKED.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

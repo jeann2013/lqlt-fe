@@ -1,0 +1,38 @@
+{
+    "MENU": {
+        "EDITADDRESS": "Registrar Direcciones "
+    },
+    "EDIT_ADDRESS": {
+        "TITLE": "Registrar Direccion",
+        "CODE": {
+            "LABEL": "Codigo Postal",
+            "PLEASE_ENTER": "Por favor ingrese el codigo postal"
+        },
+        "PHONE": {
+            "LABEL": "Telefono",
+            "PLEASE_ENTER": "Por favor ingrese el telefono"
+        },
+        "STATUS": {
+            "LABEL": "Estado",
+            "PLEASE_ENTER": "Por favor ingrese el estado"
+        },
+        "DISTRICT": {
+            "LABEL": "Distrito",
+            "PLEASE_ENTER": "Por favor ingrese el distrito"
+        },
+        "ADDRESS1": {
+            "LABEL": "Direccion 1",
+            "PLEASE_ENTER": "Por favor ingrese la direccion 1"
+        },
+        "ADDRESS2": {
+            "LABEL": "Direccion 2",
+            "PLEASE_ENTER": "Por favor ingrese la direccion 2"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

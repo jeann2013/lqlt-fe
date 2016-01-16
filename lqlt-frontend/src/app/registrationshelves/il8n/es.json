@@ -1,0 +1,23 @@
+{
+    "MENU": {
+        "EDITSHELVES": "Registrar Estantes"
+    },
+    "EDIT_SHELVES": {
+        "TITLE": "Estantes por Sucursal",
+        "IDENTIFICATION": {
+            "LABEL": "Identificacion del Estante",
+            "PLEASE_ENTER": "Por favor ingrese su identificacion del Estante"
+        },
+        "LEVELS": {
+            "LABEL": "Cantidad de niveles",
+            "PLEASE_ENTER": "Por favor ingrese su Cantidad de niveles"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+

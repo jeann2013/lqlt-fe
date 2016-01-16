@@ -1,0 +1,111 @@
+{
+    "MENU": {
+        "EDITCOMMERCE": "Registro y edición de Comercio"
+    },
+    "EDIT_COMMERCE": {
+        "TITLE": "Registro de Comercio",
+        "TRADENAME": {
+            "LABEL": "Nombre Comercial",
+            "PLEASE_ENTER": "Por favor ingrese su nombre comercial"
+        },
+        "BUSINESS_NAME": {
+            "LABEL": "Razon Social",
+            "PLEASE_ENTER": "Por favor ingrese su razon social"
+        },
+        "RUC": {
+            "LABEL": "RUC",
+            "PLEASE_ENTER": "Por favor ingrese su RUC"
+        },
+         "DV": {
+            "LABEL": "DV",
+            "PLEASE_ENTER": "Por favor ingrese su DV"
+        },
+        "OFFICIAL_COORDINATES": {
+            "LABEL": "Coordenadas oficial",
+            "PLEASE_ENTER": "Por favor ingrese su coordenadas"
+        },
+        "WEB_ADDRESS": {
+            "LABEL": "Direccion WEB",
+            "PLEASE_ENTER": "Por favor ingrese su direccion WEB"
+        },
+        "DEPARTMENT": {
+            "LABEL": "Departamento",
+            "PLEASE_ENTER": "Por favor ingrese el departamento"
+        },
+        "ADDRESS":"Direccion",
+        "PROVINCE": {
+            "LABEL": "Provincia",
+            "PLEASE_ENTER": "Por favor ingrese la provincia"
+        },
+        "DISTRICT": {
+            "LABEL": "Distrito",
+            "PLEASE_ENTER": "Por favor ingrese el distrito"
+        },
+        "CORREG": {
+            "LABEL": "Corregimiento",
+            "PLEASE_ENTER": "Por favor ingrese el corregimiento"
+        },
+        "NEIGHBORHOOD": {
+            "LABEL": "Barrio",
+            "PLEASE_ENTER": "Por favor ingrese el barrio"
+        },
+        "STREET": {
+            "LABEL": "Calle",
+            "PLEASE_ENTER": "Por favor ingrese la calle"
+        },
+        "HOME": {
+            "LABEL": "Edificio / Casa",
+            "PLEASE_ENTER": "Por favor ingrese su edificio o Casa"
+        },
+        "COORDINATES": {
+            "LABEL": "Coordenadas de Google Map",
+            "PLEASE_ENTER": "Por favor ingrese las Coordenadas"
+        },
+        "DETAILADDRESS": {
+            "LABEL": "Mas detalle de la direccion",
+            "PLEASE_ENTER": "Por favor ingrese mas detalle de la direccion"
+        },
+        "DETAILCONTACT":"Detalles del Contacto",
+        "FIRSTNAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "LASTNAME": {
+            "LABEL": "Apellido",
+            "PLEASE_ENTER": "Por favor ingrese su apellido"
+        },
+        "PHONE":"Telefono",
+        "CELLPHONE": {
+            "LABEL": "Celular",
+            "PLEASE_ENTER": "Por favor ingrese su numero de celular"
+        },
+        "USERNAME": {
+            "LABEL": "Usuario",
+            "PLEASE_ENTER": "Por favor ingrese su usuario"
+        },
+        "EMAIL": {
+            "LABEL": "Email",
+            "PLEASE_ENTER": "Por favor ingrese su Email",
+            "PLEASE_VALID": "Por favor ingrese un Email válido"
+        },
+        "EMAIL_CONFIRM": {
+            "LABEL": "Re-ingrese su email",
+            "SAME_EMAIL": "Por favor ingrese un Email válido"
+        },
+        "PASSWORD": {
+            "LABEL": "Contraseña",
+            "PLEASE_ENTER": "Por favor ingrese su password",
+            "MIN_LENGTH": "Su password debe ser mayor a 8 caracteres",
+            "SAME_PASSWORD": "Necesita ingresar el mismo password"
+        },
+        "PASSWORD_CONFIRM": {
+            "LABEL": "Re-ingrese su password"
+        },  
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

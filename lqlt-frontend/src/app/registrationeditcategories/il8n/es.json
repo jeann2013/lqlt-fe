@@ -1,0 +1,39 @@
+{
+    "MENU": {
+        "EDITCATEGORIES": "Registro Categorias "
+    },
+    "EDIT_CATEGORIES": {
+        "TITLE": "Registro de Categorias",
+        "CATEGORY": {
+            "LABEL": "Categoria Superior",
+            "PLEASE_ENTER": "Por favor ingrese la categoria superior"
+        },
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese el nombre"
+        },
+        "PAYMENT": {
+            "LABEL": "Porcentaje(%) de abono",
+            "PLEASE_ENTER": "Por favor ingrese el porcentaje de abono"
+        },
+        "CHK_PAYMENT": "El abono es ajustable por el persona de LQLT",
+        "TARIFF": {
+            "LABEL": "% Arancel",
+            "PLEASE_ENTER": "Por favor ingrese el arancel"
+        },
+        "ISC": {
+            "LABEL": "% ISC",
+            "PLEASE_ENTER": "Por favor ingrese el ISC"
+        },
+        "CIF": {
+            "LABEL": "% CIF",
+            "PLEASE_ENTER": "Por favor ingrese el CIF"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

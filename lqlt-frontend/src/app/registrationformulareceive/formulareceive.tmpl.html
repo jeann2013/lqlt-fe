@@ -1,0 +1,237 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="formulareceive" ng-submit="formulareceive.$valid && vm.formulareceiveClick()" novalidate>
+            <span class="md-headline" translate>FORMULA_RECEIVE.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="description" translate>FORMULA_RECEIVE.DESCRIPTION.LABEL</label>
+                    <input id="description" name="description" type="text" ng-model="vm.user.description" required/>
+                      <div ng-messages="formulareceive.description.$error" ng-if="formulareceive.$submitted && formulareceive.description.$invalid">
+                          <div ng-message when="required">
+                              <span translate>FORMULA_RECEIVE.DESCRIPTION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                </div>
+                <div layout="row">
+                  <div  flex="50">
+                      <fieldset class="standard">
+                        <legend translate>FORMULA_RECEIVE.AIR_TRANSPORT</legend>
+                          <md-input-container flex>
+                            <label for="airMinCost" translate>FORMULA_RECEIVE.AIR_MINIMUMCOST.LABEL</label>
+                            <input id="airMinCost" name="airMinCost" type="text" ng-model="vm.user.airMinCost" required/>
+                                <div ng-messages="formulareceive.airMinCost.$error" ng-if="formulareceive.$submitted && formulareceive.airMinCost.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.AIR_MINIMUMCOST.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airProcessed" translate>FORMULA_RECEIVE.AIR_PROCESSED.LABEL</label>
+                            <input id="airProcessed" name="airProcessed" type="text" ng-model="vm.user.airProcessed" required/>
+                                <div ng-messages="formulareceive.airProcessed.$error" ng-if="formulareceive.$submitted && formulareceive.airProcessed.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.AIR_PROCESSED.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airInsurance" translate>FORMULA_RECEIVE.AIR_INSURANCE.LABEL</label>
+                            <input id="airInsurance" name="airInsurance" type="text" ng-model="vm.user.airInsurance" required/>
+                                <div ng-messages="formulareceive.airInsurance.$error" ng-if="formulareceive.$submitted && formulareceive.airInsurance.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.AIR_INSURANCE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airStotage" translate>FORMULA_RECEIVE.AIR_STORAGE.LABEL</label>
+                            <input id="airStotage" name="airStotage" type="text" ng-model="vm.user.airStotage" required/>
+                                <div ng-messages="formulareceive.airStotage.$error" ng-if="formulareceive.$submitted && formulareceive.airStotage.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.AIR_STORAGE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airITBMS" translate>FORMULA_RECEIVE.AIR_ITBMS.LABEL</label>
+                            <input id="airITBMS" name="airITBMS" type="text" ng-model="vm.user.airITBMS" required/>
+                                <div ng-messages="formulareceive.airITBMS.$error" ng-if="formulareceive.$submitted && formulareceive.airITBMS.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.AIR_ITBMS.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-data-table-container flex>
+                          <br>
+                         <legend  translate>FORMULA_RECEIVE.AIR_PRICERANGE</legend>
+                            <table md-data-table class="md-primary md-data-table">
+                                <thead md-order="vm.query.order" >
+                                    <tr>
+                                        <th name="Libras Hasta"></th>
+                                        <th name="Precio"></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr md-auto-select ng-repeat="pricerange in vm.pricerange.data">
+                                    <td>{{pricerange.pounds}}</td>
+                                    <td>{{pricerange.price}}</td>
+                                   
+                                </tr>
+                                </tbody>
+                            </table>
+                          </md-data-table-container> 
+                      </fieldset>
+                  </div>
+                  <div  flex="50">
+                      <fieldset class="standard">
+                        <legend translate>FORMULA_RECEIVE.MARINE_TRANSPORT</legend>
+                          <md-input-container flex>
+                            <label for="marineMinCost" translate>FORMULA_RECEIVE.MARINE_MINIMUMCOST.LABEL</label>
+                            <input id="marineMinCost" name="marineMinCost" type="text" ng-model="vm.user.marineMinCost" required/>
+                                <div ng-messages="formulareceive.marineMinCost.$error" ng-if="formulareceive.$submitted && formulareceive.marineMinCost.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.MARINE_MINIMUMCOST.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineProcessed" translate>FORMULA_RECEIVE.MARINE_PROCESSED.LABEL</label>
+                            <input id="marineProcessed" name="marineProcessed" type="text" ng-model="vm.user.marineProcessed" required/>
+                                <div ng-messages="formulareceive.marineProcessed.$error" ng-if="formulareceive.$submitted && formulareceive.marineProcessed.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.MARINE_PROCESSED.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineInsurance" translate>FORMULA_RECEIVE.MARINE_INSURANCE.LABEL</label>
+                            <input id="marineInsurance" name="marineInsurance" type="text" ng-model="vm.user.marineInsurance" required/>
+                                <div ng-messages="formulareceive.marineInsurance.$error" ng-if="formulareceive.$submitted && formulareceive.marineInsurance.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.MARINE_INSURANCE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineStotage" translate>FORMULA_RECEIVE.MARINE_STORAGE.LABEL</label>
+                            <input id="marineStotage" name="marineStotage" type="text" ng-model="vm.user.marineStotage" required/>
+                                <div ng-messages="formulareceive.marineStotage.$error" ng-if="formulareceive.$submitted && formulareceive.marineStotage.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.MARINE_STORAGE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineITBMS" translate>FORMULA_RECEIVE.MARINE_ITBMS.LABEL</label>
+                            <input id="marineITBMS" name="marineITBMS" type="text" ng-model="vm.user.marineITBMS" required/>
+                                <div ng-messages="formulareceive.marineITBMS.$error" ng-if="formulareceive.$submitted && formulareceive.marineITBMS.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_RECEIVE.MARINE_ITBMS.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-data-table-container flex>
+                          <br>
+                          <legend  translate>FORMULA_RECEIVE.MARINE_PRICERANGE</legend>
+                            <table md-data-table class="md-primary md-data-table">
+                                <thead md-order="vm.query.order" >
+                                    <tr>
+                                        <th name="Libras Hasta"></th>
+                                        <th name="Precio"></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr md-auto-select ng-repeat="pricerange in vm.pricerange.data">
+                                    <td>{{pricerange.pounds}}</td>
+                                    <td>{{pricerange.price}}</td>
+                                   
+                                </tr>
+                                </tbody>
+                            </table>
+                          </md-data-table-container> 
+                      </fieldset>
+                  </div>
+                </div>
+                <div layout="row">
+                  <div  flex="100">
+                    <fieldset class="standard">
+                      <legend translate>FORMULA_RECEIVE.TEST</legend>
+                      <div layout="row"  layout-wrap>
+                        <md-input-container flex>
+                        <label for="real" translate>FORMULA_RECEIVE.REAL.LABEL</label>
+                        <input id="real" name="real" type="text" ng-model="vm.user.real" required/>
+                            <div ng-messages="formulareceive.real.$error" ng-if="formulareceive.$submitted && formulareceive.real.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>FORMULA_RECEIVE.REAL.PLEASE_ENTER</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container flex>
+                          <label for="volumen" translate>FORMULA_RECEIVE.VOLUME.LABEL</label> 
+                          <input id="volumen" name="volumen" type="text"  ng-model="vm.user.volumen"required/>
+                              <div ng-messages="formulareceive.volumen.$error" ng-if="formulareceive.$submitted && formulareceive.volumen.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_RECEIVE.VOLUME.PLEASE_ENTER</span>
+                                  </div>
+                              </div>
+                        </md-input-container >       
+                      </div>
+                      <div layout="row"  layout-wrap>
+                        <md-input-container flex>
+                           <label for="transportType" translate>FORMULA_RECEIVE.TRANSPORTTYPE.LABEL</label> 
+                          <md-select name="transportType" ng-model="vm.user.transportType" required>
+                          <md-option value="1">Valor1</md-option>
+                          </md-select>
+                             <div ng-messages="formulareceive.transportType.$error" ng-if="formulareceive.$submitted && formulareceive.transportType.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_RECEIVE.TRANSPORTTYPE.PLEASE_ENTER</span>
+                                  </div>
+                              </div>                     
+                        </md-input-container>          
+                      </div>
+                       <md-checkbox ng-model="vm.user.chkCalculation" id="chkCalculation">
+                       <span class="md-info" translate>FORMULA_RECEIVE.TO_APPLY_CALCULATION</span>
+                       </md-checkbox>
+                      <legend translate>FORMULA_RECEIVE.CALCULATION.TITLE</legend>
+                      <hr>
+                      <div layout="row"  layout-wrap>
+                        <div layout="column" layout-align="center end" flex="80">
+                          <label  translate>FORMULA_RECEIVE.CALCULATION.COST</label> 
+                          <label  translate>FORMULA_RECEIVE.CALCULATION.PROCESSED</label> 
+                          <label  translate>FORMULA_RECEIVE.CALCULATION.INSURANCE</label> 
+                          <label  translate>FORMULA_RECEIVE.CALCULATION.STORAGE</label> 
+                          <label  translate>FORMULA_RECEIVE.CALCULATION.ITBMS</label> 
+                          <label  translate>FORMULA_RECEIVE.CALCULATION.TOTAL</label> 
+                        </div>
+                         <div layout="column" class="vdivide" layout-align="center start" flex="8">
+                          <label>$0.00</label>  
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                        </div>
+                      </div>
+                    </fieldset>
+                    </div>
+                </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="FORMULA_RECEIVE.BUTTON_CANCEL"  aria-label="{{'FORMULA_RECEIVE.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="FORMULA_RECEIVE.BUTTON_SIGNUP" aria-label="{{'FORMULA_RECEIVE.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

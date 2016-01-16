@@ -1,0 +1,56 @@
+{
+    "MENU": {
+        "EDITCONTACTCLIENT": "Registro y edición de Contacto"
+    },
+    "EDIT_CONTACTCLIENT": {
+        "TITLE": "Registro de Direccion de Entradas",
+        "FIRSTNAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "LASTNAME": {
+            "LABEL": "Apellido",
+            "PLEASE_ENTER": "Por favor ingrese su apellido"
+        },
+        "PHONE":"Telefono",
+        "CELLPHONE": {
+            "LABEL": "Celular",
+            "PLEASE_ENTER": "Por favor ingrese su numero de celular"
+        },
+        "ADDRESS":"Direccion",
+        "PROVINCE": {
+            "LABEL": "Provincia",
+            "PLEASE_ENTER": "Por favor ingrese la provincia"
+        },
+        "DISTRICT": {
+            "LABEL": "Distrito",
+            "PLEASE_ENTER": "Por favor ingrese el distrito"
+        },
+        "CORREG": {
+            "LABEL": "Corregimiento",
+            "PLEASE_ENTER": "Por favor ingrese el corregimiento"
+        },
+        "NEIGHBORHOOD": {
+            "LABEL": "Barrio",
+            "PLEASE_ENTER": "Por favor ingrese el barrio"
+        },
+        "STREET": {
+            "LABEL": "Calle",
+            "PLEASE_ENTER": "Por favor ingrese la calle"
+        },
+        "HOME": {
+            "LABEL": "Edificio / Casa",
+            "PLEASE_ENTER": "Por favor ingrese su edificio o Casa"
+        },
+        "COORDINATES": {
+            "LABEL": "Coordenadas de Google Map",
+            "PLEASE_ENTER": "Por favor ingrese las Coordenadas"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

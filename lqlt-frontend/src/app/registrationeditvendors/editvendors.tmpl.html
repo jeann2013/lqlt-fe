@@ -1,0 +1,44 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editvendors" ng-submit="editvendors.$valid && vm.editvendorsClick()" novalidate>
+            <span class="md-headline" translate>EDIT_VENDORS.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                      <label for="name" translate>EDIT_VENDORS.NAME.LABEL</label>
+                      <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                        <div ng-messages="editvendors.name.$error" ng-if="editvendors.$submitted && editvendors.name.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_VENDORS.NAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="web" translate>EDIT_VENDORS.WEBSITE.LABEL</label>
+                      <input id="web" name="web" type="text" ng-model="vm.user.web" required/>
+                        <div ng-messages="editvendors.web.$error" ng-if="editvendors.$submitted && editvendors.web.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_VENDORS.WEBSITE.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+              </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_VENDORS.BUTTON_CANCEL"  aria-label="{{'EDIT_VENDORS.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_VENDORS.BUTTON_SIGNUP" aria-label="{{'EDIT_VENDORS.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

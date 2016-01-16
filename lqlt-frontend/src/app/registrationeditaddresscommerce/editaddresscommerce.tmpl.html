@@ -1,0 +1,113 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editaddresscommerce" ng-submit="editaddresscommerce.$valid && vm.editaddresscommerceClick()" novalidate>
+            <span class="md-headline" translate>EDIT_ADDRESSCOMMERCE.TITLE</span>
+              <hr>
+                <div layout="column">
+                  <span class="md-headline" translate>EDIT_ADDRESSCOMMERCE.ADDRESS</span> 
+                    <div layout="row">
+                      <md-input-container flex>
+                        <label translate>EDIT_ADDRESSCOMMERCE.PROVINCE.LABEL</label>
+                        <md-select name="provice" ng-model="vm.user.provice" required>
+                        <md-option value="1">Valor1</md-option>
+                        </md-select>
+                           <div ng-messages="editaddresscommerce.provice.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.provice.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.PROVINCE.PLEASE_ENTER</span>
+                                </div>
+                            </div>                     
+                      </md-input-container>
+                      <md-input-container flex>
+                        <label translate>EDIT_ADDRESSCOMMERCE.DISTRICT.LABEL</label>
+                        <md-select name="district" ng-model="vm.user.district" required>
+                        <md-option value="1">Valor1</md-option>
+                        </md-select>
+                           <div ng-messages="editaddresscommerce.district.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.district.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.DISTRICT.PLEASE_ENTER</span>
+                                </div>
+                            </div> 
+                      </md-input-container>
+                      <md-input-container flex>
+                        <label translate>EDIT_ADDRESSCOMMERCE.CORREG.LABEL</label>
+                        <md-select name="correg" ng-model="vm.user.correg" required>
+                        <md-option value="1">Valor1</md-option>
+                        </md-select>
+                           <div ng-messages="editaddresscommerce.correg.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.correg.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.CORREG.PLEASE_ENTER</span>
+                                </div>
+                            </div>               
+                      </md-input-container>
+                    </div>
+                    <div layout="row">
+                      <md-input-container flex>
+                        <label translate>EDIT_ADDRESSCOMMERCE.NEIGHBORHOOD.LABEL</label>
+                        <md-select name="neighborhood" ng-model="vm.user.neighborhood" required>
+                        <md-option value="1">Valor1</md-option>
+                        </md-select>
+                           <div ng-messages="editaddresscommerce.neighborhood.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.neighborhood.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.NEIGHBORHOOD.PLEASE_ENTER</span>
+                                </div>
+                            </div>                     
+                      </md-input-container>
+                      <md-input-container flex>
+                        <label for="street" translate>EDIT_ADDRESSCOMMERCE.STREET.LABEL</label> 
+                        <input id="street" name="street" type="text"  ng-model="vm.user.street" required/>
+                        <div ng-messages="editaddresscommerce.street.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.street.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.STREET.PLEASE_ENTER</span>
+                                </div>
+                            </div>  
+                      </md-input-container>
+                      <md-input-container flex>
+                        <label for="home" translate>EDIT_ADDRESSCOMMERCE.HOME.LABEL</label> 
+                        <input id="home" name="home" type="text"  ng-model="vm.user.home" required/>
+                        <div ng-messages="editaddresscommerce.home.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.home.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.HOME.PLEASE_ENTER</span>
+                                </div>
+                            </div>  
+                      </md-input-container>
+                    </div>
+                    <div layout="row">
+                      <md-input-container flex>
+                        <label translate>EDIT_ADDRESSCOMMERCE.COORDINATES.LABEL</label>
+                        <md-select name="coordinate" ng-model="vm.user.coordinate" required>
+                        <md-option value="1">Valor</md-option>
+                        </md-select>
+                        <div ng-messages="editaddresscommerce.coordinate.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.coordinate.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.COORDINATES.PLEASE_ENTER</span>
+                                </div>
+                            </div>
+                      </md-input-container>
+                      <div flex="50"></div>
+                    </div>
+                    <div layout="row">
+                      <md-input-container flex>
+                        <label for="detailaddress" translate>EDIT_ADDRESSCOMMERCE.DETAILADDRESS.LABEL</label>
+                        <textarea  id="detailaddress" name="detailaddress" ng-model="vm.user.detailaddress" columns"1" md-maxlength="150" row="5" required></textarea>
+                         <div ng-messages="editaddresscommerce.detailaddress.$error" ng-if="editaddresscommerce.$submitted && editaddresscommerce.detailaddress.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>EDIT_ADDRESSCOMMERCE.DETAILADDRESS.PLEASE_ENTER</span>
+                                </div>
+                            </div>
+                      </md-input-container>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                      <md-button  class="md-raised md-warn " translate="EDIT_ADDRESSCOMMERCE.BUTTON_CANCEL"  aria-label="{{'EDIT_ADDRESSCOMMERCE.BUTTON_CANCEL' | translate}}">
+                      </md-button>
+                      <md-button class="md-raised md-primary"  translate="EDIT_ADDRESSCOMMERCE.BUTTON_SIGNUP" aria-label="{{'EDIT_ADDRESSCOMMERCE.BUTTON_SIGNUP' | translate}}">
+                      </md-button>
+                    </div>
+                </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+

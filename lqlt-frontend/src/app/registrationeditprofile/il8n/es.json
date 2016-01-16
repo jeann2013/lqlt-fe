@@ -1,0 +1,36 @@
+{
+    "MENU": {
+        "EDITPROFILE": "Registro Perfil"
+    },
+    "EDIT_PROFILE": {
+        "TITLE": "Registro de Planes Recurrente",
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "FORMULA": "Fornula para el perfil",
+        "RECEIVES": {
+            "LABEL": "Recibe por ti",
+            "PLEASE_ENTER": "Por favor ingrese su formula Recibe por ti"
+        },
+        "LOAD": {
+            "LABEL": "Carga por ti",
+            "PLEASE_ENTER": "Por favor ingrese su formula Carga por ti"
+        },
+        "BUY": {
+            "LABEL": "Compra por ti",
+            "PLEASE_ENTER": "Por favor ingrese su formula Compra por ti"
+        },
+        "DELIVERY": {
+            "LABEL": "Entrega por ti",
+            "PLEASE_ENTER": "Por favor ingrese su formula Entrega por ti"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+

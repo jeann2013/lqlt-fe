@@ -1,0 +1,302 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="formulabuy" ng-submit="formulabuy.$valid && vm.formulabuyClick()" novalidate>
+            <span class="md-headline" translate>FORMULA_BUY.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="description" translate>FORMULA_BUY.DESCRIPTION.LABEL</label>
+                    <input id="description" name="description" type="text" ng-model="vm.user.description" required/>
+                      <div ng-messages="formulabuy.description.$error" ng-if="formulabuy.$submitted && formulabuy.description.$invalid">
+                          <div ng-message when="required">
+                              <span translate>FORMULA_BUY.DESCRIPTION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                </div>
+                <div layout="row">
+                  <div  flex="50">
+                      <fieldset class="standard">
+                        <legend translate>FORMULA_BUY.AIR_TRANSPORT</legend>
+                          <md-input-container flex>
+                            <label for="airCost" translate>FORMULA_BUY.AIR_COST.LABEL</label>
+                            <input id="airCost" name="airCost" type="text" ng-model="vm.user.airCost" required/>
+                                <div ng-messages="formulabuy.airCost.$error" ng-if="formulabuy.$submitted && formulabuy.airCost.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_COST.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airMinCost" translate>FORMULA_BUY.AIR_MINIMUMCOST.LABEL</label>
+                            <input id="airMinCost" name="airMinCost" type="text" ng-model="vm.user.airMinCost" required/>
+                                <div ng-messages="formulabuy.airMinCost.$error" ng-if="formulabuy.$submitted && formulabuy.airMinCost.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_MINIMUMCOST.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airProcessed" translate>FORMULA_BUY.AIR_PROCESSED.LABEL</label>
+                            <input id="airProcessed" name="airProcessed" type="text" ng-model="vm.user.airProcessed" required/>
+                                <div ng-messages="formulabuy.airProcessed.$error" ng-if="formulabuy.$submitted && formulabuy.airProcessed.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_PROCESSED.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airStotage" translate>FORMULA_BUY.AIR_STORAGE.LABEL</label>
+                            <input id="airStotage" name="airStotage" type="text" ng-model="vm.user.airStotage" required/>
+                                <div ng-messages="formulabuy.airStotage.$error" ng-if="formulabuy.$submitted && formulabuy.airStotage.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_STORAGE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airService" translate>FORMULA_BUY.AIR_SERVICE.LABEL</label>
+                            <input id="airService" name="airService" type="text" ng-model="vm.user.airService" required/>
+                                <div ng-messages="formulabuy.airService.$error" ng-if="formulabuy.$submitted && formulabuy.airService.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_SERVICE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airInsurance" translate>FORMULA_BUY.AIR_INSURANCE.LABEL</label>
+                            <input id="airInsurance" name="airInsurance" type="text" ng-model="vm.user.airInsurance" required/>
+                                <div ng-messages="formulabuy.airInsurance.$error" ng-if="formulabuy.$submitted && formulabuy.airInsurance.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_INSURANCE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airITBMS" translate>FORMULA_BUY.AIR_ITBMS.LABEL</label>
+                            <input id="airITBMS" name="airITBMS" type="text" ng-model="vm.user.airITBMS" required/>
+                                <div ng-messages="formulabuy.airITBMS.$error" ng-if="formulabuy.$submitted && formulabuy.airITBMS.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.AIR_ITBMS.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-data-table-container flex>
+                          <br>
+                         <legend  translate>FORMULA_BUY.AIR_PRICERANGE</legend>
+                            <table md-data-table class="md-primary md-data-table">
+                                <thead md-order="vm.query.order" >
+                                    <tr>
+                                        <th name="Libras Hasta"></th>
+                                        <th name="Precio"></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr md-auto-select ng-repeat="pricerange in vm.pricerange.data">
+                                    <td>{{pricerange.pounds}}</td>
+                                    <td>{{pricerange.price}}</td>
+                                   
+                                </tr>
+                                </tbody>
+                            </table>
+                          </md-data-table-container> 
+                      </fieldset>
+                  </div>
+                  <div  flex="50">
+                      <fieldset class="standard">
+                        <legend translate>FORMULA_BUY.MARINE_TRANSPORT</legend>
+                          <md-input-container flex>
+                            <label for="marineCost" translate>FORMULA_BUY.MARINE_COST.LABEL</label>
+                            <input id="marineCost" name="marineCost" type="text" ng-model="vm.user.marineCost" required/>
+                                <div ng-messages="formulabuy.marineCost.$error" ng-if="formulabuy.$submitted && formulabuy.marineCost.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_COST.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineMinCost" translate>FORMULA_BUY.MARINE_MINIMUMCOST.LABEL</label>
+                            <input id="marineMinCost" name="marineMinCost" type="text" ng-model="vm.user.marineMinCost" required/>
+                                <div ng-messages="formulabuy.marineMinCost.$error" ng-if="formulabuy.$submitted && formulabuy.marineMinCost.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_MINIMUMCOST.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineProcessed" translate>FORMULA_BUY.MARINE_PROCESSED.LABEL</label>
+                            <input id="marineProcessed" name="marineProcessed" type="text" ng-model="vm.user.marineProcessed" required/>
+                                <div ng-messages="formulabuy.marineProcessed.$error" ng-if="formulabuy.$submitted && formulabuy.marineProcessed.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_PROCESSED.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineStotage" translate>FORMULA_BUY.MARINE_STORAGE.LABEL</label>
+                            <input id="marineStotage" name="marineStotage" type="text" ng-model="vm.user.marineStotage" required/>
+                                <div ng-messages="formulabuy.marineStotage.$error" ng-if="formulabuy.$submitted && formulabuy.marineStotage.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_STORAGE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineService" translate>FORMULA_BUY.MARINE_SERVICE.LABEL</label>
+                            <input id="marineService" name="marineService" type="text" ng-model="vm.user.marineService" required/>
+                                <div ng-messages="formulabuy.marineService.$error" ng-if="formulabuy.$submitted && formulabuy.marineService.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_SERVICE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineInsurance" translate>FORMULA_BUY.MARINE_INSURANCE.LABEL</label>
+                            <input id="marineInsurance" name="marineInsurance" type="text" ng-model="vm.user.marineInsurance" required/>
+                                <div ng-messages="formulabuy.marineInsurance.$error" ng-if="formulabuy.$submitted && formulabuy.marineInsurance.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_INSURANCE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="marineITBMS" translate>FORMULA_BUY.MARINE_ITBMS.LABEL</label>
+                            <input id="marineITBMS" name="marineITBMS" type="text" ng-model="vm.user.marineITBMS" required/>
+                                <div ng-messages="formulabuy.marineITBMS.$error" ng-if="formulabuy.$submitted && formulabuy.marineITBMS.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_BUY.MARINE_ITBMS.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-data-table-container flex>
+                          <br>
+                          <legend  translate>FORMULA_BUY.MARINE_PRICERANGE</legend>
+                           <table md-data-table class="md-primary md-data-table">
+                                <thead md-order="vm.query.order" >
+                                    <tr>
+                                        <th name="Libras Hasta"></th>
+                                        <th name="Precio"></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr md-auto-select ng-repeat="pricerange in vm.pricerange.data">
+                                    <td>{{pricerange.pounds}}</td>
+                                    <td>{{pricerange.price}}</td>
+                                   
+                                </tr>
+                                </tbody>
+                            </table>
+                          </md-data-table-container> 
+                      </fieldset>
+                  </div>
+                </div>
+                <div layout="row">
+                  <div  flex="100">
+                    <fieldset class="standard">
+                      <legend translate>FORMULA_BUY.TEST</legend>
+                      <div layout="row"  layout-wrap>
+                        <md-input-container flex>
+                        <label for="real" translate>FORMULA_BUY.REAL.LABEL</label>
+                        <input id="real" name="real" type="text" ng-model="vm.user.real" required/>
+                            <div ng-messages="formulabuy.real.$error" ng-if="formulabuy.$submitted && formulabuy.real.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>FORMULA_BUY.REAL.PLEASE_ENTER</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container flex>
+                          <label for="volumen" translate>FORMULA_BUY.VOLUME.LABEL</label> 
+                          <input id="volumen" name="volumen" type="text"  ng-model="vm.user.volumen"required/>
+                              <div ng-messages="formulabuy.volumen.$error" ng-if="formulabuy.$submitted && formulabuy.volumen.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_BUY.VOLUME.PLEASE_ENTER</span>
+                                  </div>
+                              </div>
+                        </md-input-container > 
+                         <md-input-container flex>
+                          <label for="amount" translate>FORMULA_BUY.AMOUNT.LABEL</label> 
+                          <input id="amount" name="amount" type="text"  ng-model="vm.user.amount"required/>
+                              <div ng-messages="formulabuy.amount.$error" ng-if="formulabuy.$submitted && formulabuy.amount.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_BUY.AMOUNT.PLEASE_ENTER</span>
+                                  </div>
+                              </div>
+                        </md-input-container >           
+                      </div>
+                      <div layout="row"  layout-wrap>
+                        <md-input-container flex>
+                          <label for="shipping" translate>FORMULA_BUY.SHIPPING.LABEL</label>
+                          <input id="shipping" name="shipping" type="text" ng-model="vm.user.shipping" required/>
+                              <div ng-messages="formulabuy.shipping.$error" ng-if="formulabuy.$submitted && formulabuy.shipping.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_BUY.SHIPPING.PLEASE_ENTER</span>
+                                  </div>                          
+                              </div>
+                        </md-input-container>
+                        <md-input-container flex>
+                          <label for="tax" translate>FORMULA_BUY.TAX.LABEL</label> 
+                          <input id="tax" name="tax" type="text"  ng-model="vm.user.tax"required/>
+                              <div ng-messages="formulabuy.tax.$error" ng-if="formulabuy.$submitted && formulabuy.tax.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_BUY.TAX.PLEASE_ENTER</span>
+                                  </div>
+                              </div>
+                        </md-input-container > 
+                        <md-input-container flex>
+                           <label for="transportType" translate>FORMULA_BUY.TRANSPORTTYPE.LABEL</label> 
+                          <md-select name="transportType" ng-model="vm.user.transportType" required>
+                          <md-option value="1">Valor1</md-option>
+                          </md-select>
+                             <div ng-messages="formulabuy.transportType.$error" ng-if="formulabuy.$submitted && formulabuy.transportType.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_BUY.TRANSPORTTYPE.PLEASE_ENTER</span>
+                                  </div>
+                              </div>                     
+                        </md-input-container>          
+                      </div>
+                       <md-checkbox ng-model="vm.user.chkCalculation" id="chkCalculation">
+                       <span class="md-info" translate>FORMULA_BUY.TO_APPLY_CALCULATION</span>
+                       </md-checkbox>
+                      <legend translate>FORMULA_BUY.CALCULATION.TITLE</legend>
+                      <hr>
+                      <div layout="row"  layout-wrap>
+                        <div layout="column" layout-align="center end" flex="80">
+                          <label  translate>FORMULA_BUY.CALCULATION.COST</label> 
+                          <label  translate>FORMULA_BUY.CALCULATION.SERVICE</label> 
+                          <label  translate>FORMULA_BUY.CALCULATION.PROCESSED</label> 
+                          <label  translate>FORMULA_BUY.CALCULATION.STORAGE</label> 
+                          <label  translate>FORMULA_BUY.CALCULATION.INSURANCE</label> 
+                          <label  translate>FORMULA_BUY.CALCULATION.ITBMS</label> 
+                          <label  translate>FORMULA_BUY.CALCULATION.TOTAL</label> 
+                        </div>
+                         <div layout="column" class="vdivide" layout-align="center start" flex="8">
+                          <label>$0.00</label> 
+                          <label>$0.00</label>  
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                        </div>
+                      </div>
+                    </fieldset>
+                    </div>
+                </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="FORMULA_BUY.BUTTON_CANCEL"  aria-label="{{'FORMULA_BUY.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="FORMULA_BUY.BUTTON_SIGNUP" aria-label="{{'FORMULA_BUY.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

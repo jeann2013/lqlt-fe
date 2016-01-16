@@ -1,0 +1,41 @@
+{
+    "MENU": {
+        "EDITCARDCREDIT": "Registro Tarjeta Credito"
+    },
+    "EDIT_CARDCREDIT": {
+        "TITLE": "Registro de Tarjeta de Credito",
+        "BANK": {
+            "LABEL": "Banco",
+            "PLEASE_ENTER": "Por favor ingrese el banco"
+        },
+        "CARDNUMBER": {
+            "LABEL": "No. Tarjeta",
+            "PLEASE_ENTER": "Por favor ingrese el No. tarjeta"
+        },
+        "TYPE": {
+            "LABEL": "Tipo",
+            "PLEASE_ENTER": "Por favor ingrese el tipo"
+        },
+        "EXPIRATION": {
+            "LABEL": "Vence en",
+            "PLEASE_ENTER": "Por favor ingrese cuando vence la tajeta"
+        },
+        "PAYMENTMETHOD": {
+            "TITLE": "Metodos de pagos",
+            "LABEL1": "Metodos de Pagos registrados",
+            "LABEL2": "Metodos de Pagos registrados 2",
+            "LABEL3": "Metodos de Pagos registrados 3",
+            "LABEL4": "Metodos de Pagos registrados 4",
+            "LABEL5": "Metodos de Pagos registrados 5",
+            "LABEL6": "Metodos de Pagos registrados 6",
+            "LABEL7": "Metodos de Pagos registrados 7",
+            "LABEL8": "Metodos de Pagos registrados 8"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

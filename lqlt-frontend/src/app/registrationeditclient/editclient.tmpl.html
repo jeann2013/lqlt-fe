@@ -1,0 +1,258 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+        <form name="editclient" ng-submit="editclient.$valid && vm.editclientClick()" novalidate>
+          <span class="md-headline" translate>EDIT_CLIENT.TITLE</span>
+          <hr>
+            <div layout="column"> 
+              <div layout="row">
+                <md-input-container flex>
+                  <label for="firstName" translate>EDIT_CLIENT.FIRSTNAME.LABEL</label>
+                  <input id="firstName" name="firstName" type="text" ng-model="vm.user.firstName" required/>
+                      <div ng-messages="editclient.firstName.$error" ng-if="editclient.$submitted && editclient.firstName.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.FIRSTNAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="lastName" translate>EDIT_CLIENT.LASTNAME.LABEL</label> 
+                  <input id="lastName" name="lastName" type="text"  ng-model="vm.user.lastName"required/>
+                      <div ng-messages="editclient.lastName.$error" ng-if="editclient.$submitted && editclient.lastName.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.LASTNAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container >
+                <div layout="column" flex layout-align="center center">
+                  <md-datepicker ng-model="vm.birtdate" md-placeholder="{{'EDIT_CLIENT.BIRTDATE' | translate}}" ></md-datepicker>
+                  </div> 
+                
+               
+                </div>
+
+                 <div layout="row">
+                 <md-input-container flex>
+                  <label translate>EDIT_CLIENT.SEXO</label>
+                  <md-select ng-model="vm.user.sexo">
+                  <md-option value="1">MASCULINO</md-option>
+                  <md-option value="2">FEMENINO</md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="phone" translate>EDIT_CLIENT.PHONE</label> 
+                    <input id="phone" name="phone" type="text"  ng-model="vm.user.phone"/>
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="cellPhone" translate>EDIT_CLIENT.CELLPHONE.LABEL</label>
+                    <input id="cellPhone" name="cellPhone" type="text"  ng-model="vm.user.cellPhone"required/>
+                      <div ng-messages="editclient.cellPhone.$error" ng-if="editclient.$submitted && editclient.cellPhone.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.CELLPHONE.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                </div>
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="ident" translate>EDIT_CLIENT.IDENTIFICATION.LABEL</label> 
+                    <input id="ident" name="ident" type="text"  ng-model="vm.user.ident"required/>
+                      <div ng-messages="editclient.ident.$error" ng-if="editclient.$submitted && editclient.ident.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.IDENTIFICATION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="idenType" translate>EDIT_CLIENT.IDENTIFICATION_TYPE.LABEL</label>
+                    <md-select name="idenType" ng-model="vm.user.idenType" required>
+                    <md-option value="1">Cedula</md-option>
+                    </md-select>
+                     <div ng-messages="editclient.idenType.$error" ng-if="editclient.$submitted && editclient.idenType.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.IDENTIFICATION_TYPE.PLEASE_ENTER</span>
+                          </div>
+                      </div> 
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="dv" translate>EDIT_CLIENT.DV</label> 
+                    <input id="dv" name="dv" type="text"  ng-model="vm.user.dv"/>
+                  </md-input-container>
+                  
+                 
+                </div>
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="uploadfile" translate>EDIT_CLIENT.UPLOAD_IMAGE</label> 
+                    <input id="uploadfile" name="uploadfile" type="text"  ng-model="vm.user.uploadfile"/>
+                  </md-input-container>
+                  <div layout="column" layout-align="center center">
+                    <md-button class="md-primary md-fab md-mini">
+                    <md-icon md-font-icon="zmdi zmdi-cloud-upload"></md-icon>
+                    </md-button>
+                  </div>
+                </div>
+            </div>
+          <hr> 
+            <span class="md-headline" translate>EDIT_CLIENT.ADDRESS</span>
+            <div layout="column" > 
+              <div layout="row">
+                <md-input-container flex>
+                  <label translate>EDIT_CLIENT.PROVINCE.LABEL</label>
+                  <md-select name="provice" ng-model="vm.user.provice" required>
+                  <md-option value="1">Valor1</md-option>
+                  </md-select>
+                     <div ng-messages="editclient.provice.$error" ng-if="editclient.$submitted && editclient.provice.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.PROVINCE.PLEASE_ENTER</span>
+                          </div>
+                      </div>                     
+                </md-input-container>
+                <md-input-container flex>
+                  <label translate>EDIT_CLIENT.DISTRICT.LABEL</label>
+                  <md-select name="district" ng-model="vm.user.district" required>
+                  <md-option value="1">Valor1</md-option>
+                  </md-select>
+                     <div ng-messages="editclient.district.$error" ng-if="editclient.$submitted && editclient.district.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.DISTRICT.PLEASE_ENTER</span>
+                          </div>
+                      </div> 
+                </md-input-container>
+                <md-input-container flex>
+                  <label translate>EDIT_CLIENT.CORREG.LABEL</label>
+                  <md-select name="correg" ng-model="vm.user.correg" required>
+                  <md-option value="1">Valor1</md-option>
+                  </md-select>
+                     <div ng-messages="editclient.correg.$error" ng-if="editclient.$submitted && editclient.correg.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.CORREG.PLEASE_ENTER</span>
+                          </div>
+                      </div>               
+                </md-input-container>
+              </div>
+              <div layout="row">
+                <md-input-container flex>
+                  <label translate>EDIT_CLIENT.NEIGHBORHOOD.LABEL</label>
+                  <md-select name="neighborhood" ng-model="vm.user.neighborhood" required>
+                  <md-option value="1">Valor1</md-option>
+                  </md-select>
+                     <div ng-messages="editclient.neighborhood.$error" ng-if="editclient.$submitted && editclient.neighborhood.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.NEIGHBORHOOD.PLEASE_ENTER</span>
+                          </div>
+                      </div>                     
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="street" translate>EDIT_CLIENT.STREET.LABEL</label> 
+                  <input id="street" name="street" type="text"  ng-model="vm.user.street" required/>
+                  <div ng-messages="editclient.street.$error" ng-if="editclient.$submitted && editclient.street.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.STREET.PLEASE_ENTER</span>
+                          </div>
+                      </div>  
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="home" translate>EDIT_CLIENT.HOME.LABEL</label> 
+                  <input id="home" name="home" type="text"  ng-model="vm.user.home" required/>
+                  <div ng-messages="editclient.home.$error" ng-if="editclient.$submitted && editclient.home.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.HOME.PLEASE_ENTER</span>
+                          </div>
+                      </div>  
+                </md-input-container>
+              </div>
+              <div layout="row">
+                <md-input-container flex>
+                  <label translate>EDIT_CLIENT.COORDINATES.LABEL</label>
+                  <md-select name="coordinate" ng-model="vm.user.coordinate" required>
+                  <md-option value="1">Valor</md-option>
+                  </md-select>
+                  <div ng-messages="editclient.coordinate.$error" ng-if="editclient.$submitted && editclient.coordinate.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.COORDINATES.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+              <div flex="50"></div>
+              </div>
+              <div layout="row">
+                <md-input-container flex>
+                  <label for="detailaddress" translate>EDIT_CLIENT.DETAILADDRESS.LABEL</label>
+                  <textarea  id="detailaddress" name="detailaddress" ng-model="vm.user.detailaddress" columns"1" md-maxlength="150" row="5" required></textarea>
+                   <div ng-messages="editclient.detailaddress.$error" ng-if="editclient.$submitted && editclient.detailaddress.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_CLIENT.DETAILADDRESS.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+              </div>
+            </div>
+          <hr> 
+            <span class="md-headline" translate>EDIT_CLIENT.ADDRESS</span>
+            <div layout="column" >
+              <div layout="row"> 
+                <md-input-container flex>
+                  <label for="userName" translate>EDIT_CLIENT.USERNAME.LABEL</label>
+                  <input id="userName" label="userName" name="userName" type="text" ng-model="vm.user.userName" required/>
+                  <div ng-messages="editclient.userName.$error" ng-if="editclient.$submitted && editclient.userName.$invalid">
+                    <div ng-message when="required">
+                      <span translate>EDIT_CLIENT.USERNAME.PLEASE_ENTER</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="email" translate>EDIT_CLIENT.EMAIL.LABEL</label>
+                  <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
+                  <div ng-messages="editclient.email.$error" ng-if="editclient.$submitted && editclient.email.$invalid">
+                    <div ng-message when="required">
+                      <span translate>EDIT_CLIENT.EMAIL.PLEASE_ENTER</span>
+                    </div>
+                    <div ng-message when="email">
+                      <span translate>EDIT_CLIENT.EMAIL.PLEASE_VALID</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="emailConfirmation" translate>EDIT_CLIENT.EMAIL_CONFIRM.LABEL</label>
+                  <input id="emailConfirmation" label="emailConfirmation" name="emailConfirmation" type="emailConfirmation" ng-model="vm.user.emailConfirmation" required/>
+                  <div ng-messages="editclient.emailConfirmation.$error" ng-if="editclient.$submitted && editclient.email.$valid && editclient.emailConfirmation.$invalid">
+                    <div ng-message when="required">
+                      <span translate>EDIT_CLIENT.EMAIL.PLEASE_ENTER</span>
+                    </div>
+                    <div ng-message when="emailConfirmation">
+                      <span translate>EDIT_CLIENT.EMAIL.PLEASE_VALID</span>
+                    </div>
+                  </div>
+                </md-input-container>
+              </div> 
+              <div layout="row"> 
+                <md-input-container flex>
+                  <label for="password" translate>EDIT_CLIENT.PASSWORD.LABEL</label>
+                  <input id="password" label="password" name="password" type="password" ng-model="vm.user.password" tri-same-password="editclient.confirm" ng-minlength="8" required/>
+                  <ng-messages for="editclient.password.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="editclient.$submitted && editclient.password.$invalid">
+                  </ng-messages>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="password" translate>EDIT_CLIENT.PASSWORD_CONFIRM.LABEL</label>
+                  <input id="confirmPassword" label="confirmPassword" name="confirmPassword" type="password" ng-model="vm.user.confirmPassword" tri-same-password="editclient.password" ng-minlength="8" required/>
+                  <ng-messages for="editclient.confirmPassword.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="editclient.$submitted && editclient.password.$valid && editclient.confirmPassword.$invalid">
+                  </ng-messages>
+                </md-input-container>
+              </div> 
+              <div layout="row" layout-align="center center">
+             
+              <md-button  class="md-raised md-warn " translate="EDIT_CLIENT.BUTTON_CANCEL"  aria-label="{{'EDIT_CLIENT.BUTTON_CANCEL' | translate}}"></md-button>
+              
+             
+              <md-button class="md-raised md-primary"  translate="EDIT_CLIENT.BUTTON_SIGNUP" aria-label="{{'EDIT_CLIENT.BUTTON_SIGNUP' | translate}}"></md-button>
+              </div>
+            </div>     
+        </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

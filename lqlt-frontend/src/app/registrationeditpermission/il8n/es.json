@@ -1,0 +1,58 @@
+{
+    "MENU": {
+        "EDITPERMISSION": "Registro y edic. Permi"
+    },
+    "EDIT_PERMISSION": {
+        "TITLE": "Registrar de Permisos",
+        "FIRSTNAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "CLIENTS": "Clientes",
+        "SET_PROFILES": "Configuracion-Perfiles",
+        "SET_MANAGERS": "Configuracion-Administradores",
+        "SET_CATEGORIES": "Configuracion-Categorias",
+        "REQUESTED": "Pedidos",
+        "ORDERS": "Ordenes",
+        "FOLLOWUP": "Seguimiento",
+        "CLAIMS": "Reclamos",
+        "DELIVERY": "Entrega",
+        "CELLAR": "Bodega",
+        "PAYMENTS": "Pagos",
+        "BANKTRANSACTIONS": "Transacciones bancarias",
+        "AUTHORIZATIONLEVEL": "Nivel de Autorizacion",
+        "DELIVERY_OLD": "Entrega de mercancia con ordenes viejas",
+        "ADJUSTING": "Ajuste de abono minimo a la orden",
+        "DISCOUNT": "Descuento Sobre",
+        "SERVICE": "Servicio de compra",
+        "POUNDS": "Libras",
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

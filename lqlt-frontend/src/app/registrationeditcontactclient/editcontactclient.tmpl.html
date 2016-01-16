@@ -1,0 +1,142 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editcontactclient" ng-submit="editcontactclient.$valid && vm.editcontactclientClick()" novalidate>
+            <span class="md-headline" translate>EDIT_CONTACTCLIENT.TITLE</span>
+            <hr>
+              <!--<p translate>Breadcrumbs</p>-->
+              <div layout="column"> 
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="firstName" translate>EDIT_CONTACTCLIENT.FIRSTNAME.LABEL</label>
+                    <input id="firstName" name="firstName" type="text" ng-model="vm.user.firstName" required/>
+                        <div ng-messages="editcontactclient.firstName.$error" ng-if="editcontactclient.$submitted && editcontactclient.firstName.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CONTACTCLIENT.FIRSTNAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="lastName" translate>EDIT_CONTACTCLIENT.LASTNAME.LABEL</label> 
+                    <input id="lastName" name="lastName" type="text"  ng-model="vm.user.lastName"required/>
+                        <div ng-messages="editcontactclient.lastName.$error" ng-if="editcontactclient.$submitted && editcontactclient.lastName.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CONTACTCLIENT.LASTNAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container >       
+                </div>
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="phone" translate>EDIT_CONTACTCLIENT.PHONE</label> 
+                      <input id="phone" name="phone" type="text"  ng-model="vm.user.phone"/>
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="cellPhone" translate>EDIT_CONTACTCLIENT.CELLPHONE.LABEL</label>
+                      <input id="cellPhone" name="cellPhone" type="text"  ng-model="vm.user.cellPhone"required/>
+                        <div ng-messages="editcontactclient.cellPhone.$error" ng-if="editcontactclient.$submitted && editcontactclient.cellPhone.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CONTACTCLIENT.CELLPHONE.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+              </div>
+            <hr> 
+              <span class="md-headline" translate>EDIT_CONTACTCLIENT.ADDRESS</span>
+                <div layout="column" > 
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCLIENT.PROVINCE.LABEL</label>
+                      <md-select name="provice" ng-model="vm.user.provice" required>
+                      <md-option value="1">Valor1</md-option>
+                      </md-select>
+                         <div ng-messages="editcontactclient.provice.$error" ng-if="editcontactclient.$submitted && editcontactclient.provice.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.PROVINCE.PLEASE_ENTER</span>
+                              </div>
+                          </div>                     
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCLIENT.DISTRICT.LABEL</label>
+                      <md-select name="district" ng-model="vm.user.district" required>
+                      <md-option value="1">Valor1</md-option>
+                      </md-select>
+                         <div ng-messages="editcontactclient.district.$error" ng-if="editcontactclient.$submitted && editcontactclient.district.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.DISTRICT.PLEASE_ENTER</span>
+                              </div>
+                          </div> 
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCLIENT.CORREG.LABEL</label>
+                      <md-select name="correg" ng-model="vm.user.correg" required>
+                      <md-option value="1">Valor1</md-option>
+                      </md-select>
+                         <div ng-messages="editcontactclient.correg.$error" ng-if="editcontactclient.$submitted && editcontactclient.correg.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.CORREG.PLEASE_ENTER</span>
+                              </div>
+                          </div>               
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCLIENT.NEIGHBORHOOD.LABEL</label>
+                      <md-select name="neighborhood" ng-model="vm.user.neighborhood" required>
+                      <md-option value="1">Valor1</md-option>
+                      </md-select>
+                         <div ng-messages="editcontactclient.neighborhood.$error" ng-if="editcontactclient.$submitted && editcontactclient.neighborhood.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.NEIGHBORHOOD.PLEASE_ENTER</span>
+                              </div>
+                          </div>                     
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="street" translate>EDIT_CONTACTCLIENT.STREET.LABEL</label> 
+                      <input id="street" name="street" type="text"  ng-model="vm.user.street" required/>
+                      <div ng-messages="editcontactclient.street.$error" ng-if="editcontactclient.$submitted && editcontactclient.street.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.STREET.PLEASE_ENTER</span>
+                              </div>
+                          </div>  
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="home" translate>EDIT_CONTACTCLIENT.HOME.LABEL</label> 
+                      <input id="home" name="home" type="text"  ng-model="vm.user.home" required/>
+                      <div ng-messages="editcontactclient.home.$error" ng-if="editcontactclient.$submitted && editcontactclient.home.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.HOME.PLEASE_ENTER</span>
+                              </div>
+                          </div>  
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCLIENT.COORDINATES.LABEL</label>
+                      <md-select name="coordinate" ng-model="vm.user.coordinate" required>
+                      <md-option value="1">Valor</md-option>
+                      </md-select>
+                      <div ng-messages="editcontactclient.coordinate.$error" ng-if="editcontactclient.$submitted && editcontactclient.coordinate.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCLIENT.COORDINATES.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                  <div flex="50"></div>
+                  </div>
+                  <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_CONTACTCLIENT.BUTTON_CANCEL"  aria-label="{{'EDIT_CONTACTCLIENT.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_CONTACTCLIENT.BUTTON_SIGNUP" aria-label="{{'EDIT_CONTACTCLIENT.BUTTON_SIGNUP' | translate}}"></md-button>
+                  </div>
+                </div>  
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

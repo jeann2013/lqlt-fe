@@ -1,0 +1,43 @@
+// Authentication Pages
+#ui-login {
+  &.ng-enter {
+    @include slideInUp($delay: 0.5s);
+  }
+  &.ng-leave {
+    @include slideOutDown();
+  }
+}
+
+// Sign Up
+form[name=signup] {
+  .outter-error-box {
+    color: rgb(255,87,34); 
+    font-size: 12px;
+  }
+
+  #agreeToLicense .md-icon {
+    //margin-top: -12px;
+
+  }
+}
+
+md-input-container.md-input-invalid {
+  label {
+    color: rgba(0, 0, 0, 0.258824) !important;
+  }
+
+  .md-input {
+    border-color: rgba(0,0,0,0.12) !important;
+  }
+}
+// Change Pass
+form[name=changepass] {
+  .outter-error-box {
+    color: rgb(255,87,34); 
+    font-size: 12px;
+  }
+   
+}
+.md-info{
+   font-size: 13px;
+}

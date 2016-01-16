@@ -1,0 +1,64 @@
+{
+    "MENU": {
+        "SUBREGIST": "Sub Registros de Cuentas Clientes - Comercios"
+        
+    },
+    "CLIENT": {
+        "TITLE": "Informacion para su cuenta de cliente",
+        "TYPE_ACCOUNT": "Tipo de cuenta",
+        "CIP": {
+            "LABEL": "Cédula",
+            "PLEASE_ENTER": "Por favor ingrese su cédula"
+        },
+        "MESSAGES": {
+            "CED_EXIST": "Esta Cédula/Pasaporte ya existe",
+            "CONFIRM_SAVE": "Su confirmación ha sido guardada",
+            "NO_CONFIR": "No se puede confirmar en este momento"
+        },
+        "CHECK_DIGIT": "Dígito Verificador",
+        "IDENTIFICATION_TYPE": {
+            "LABEL": "Tipo de identificación",
+            "PLEASE_ENTER": "Por favor ingrese su tipo de identificación"
+        },
+        "PREFERENCE_OFFICE": {
+            "LABEL": "Sucursal de preferencia",
+            "PLEASE_ENTER": "Por favor ingrese su sucursal de preferencia"
+        },
+        "CHECK_CODE": "Código de Verificación",
+        "NEXT_LINK": "Siguiente"
+
+    },
+    "COMMERCE": {
+        
+        "TITLE": "Informacion para su cuenta de cliente",
+        "TYPE_ACCOUNT": "Tipo de cuenta",
+        "RUC": {
+            "LABEL": "RUC",
+            "PLEASE_ENTER": "Por favor ingrese su RUC"
+        },
+        "MESSAGES": {
+            "RUC_EXIST": "Este RUC ya existe",
+            "CONFIRM_SAVE": "Su confirmación ha sido guardada",
+            "NO_CONFIR": "No se puede confirmar en este momento"
+        },
+        "CHECK_DIGIT": {
+            "LABEL": "Dígito Verificador",
+            "PLEASE_ENTER": "Por favor ingrese su Dígito Verificador"
+        },
+        "BUSINESS_NAME": {
+            "LABEL": "Razon Social",
+            "PLEASE_ENTER": "Por favor ingrese su Razon Social"
+        },
+        "TRADENAME": "Nombre Comercial",
+        "PREFERENCE_OFFICE": {
+            "LABEL": "Sucursal de preferencia",
+            "PLEASE_ENTER": "Por favor ingrese su sucursal de preferencia"
+        },
+        "CHECK_CODE": "Código de Verificación",
+        "NEXT_LINK": "Siguiente"
+
+    }
+}
+
+
+

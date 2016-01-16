@@ -1,0 +1,18 @@
+{
+    "MENU": {
+        "EDITALLIES": "Registro Aliados"
+    },
+    "EDIT_ALLIES": {
+        "TITLE": "Registro de Aliado de Pago",
+        "NAME": {
+            "LABEL": "Aliado",
+            "PLEASE_ENTER": "Por favor ingrese el Aliado"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

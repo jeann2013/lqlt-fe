@@ -1,0 +1,24 @@
+{
+    "MENU": {
+        "EDITMETHODS": "Registro Metodo "
+    },
+    "EDIT_METHODS": {
+        "TITLE": "Registro de metodo de pago",
+        "METHODS": {
+            "LABEL": "Metodo",
+            "PLEASE_ENTER": "Por favor ingrese el metodo"
+        },
+        "USO": {
+            "LABEL": "Uso en",
+            "PLEASE_ENTER": "Por favor ingrese el uso en"
+        },
+        "CHK_PROMOTION": "Tiene una promocion",
+        "PROMOTION": "Promociones",
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

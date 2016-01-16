@@ -1,0 +1,135 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editlockers" ng-submit="editlockers.$valid && vm.editlockersClick()" novalidate>
+            <span class="md-headline" translate>EDIT_LOCKERS.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label for="name" translate>EDIT_LOCKERS.NAME.LABEL</label>
+                    <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                      <div ng-messages="editlockers.name.$error" ng-if="editlockers.$submitted && editlockers.name.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_LOCKERS.NAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                 <md-input-container flex>
+                  <label for="userName" translate>EDIT_LOCKERS.USERNAME.LABEL</label>
+                  <input id="userName" label="userName" name="userName" type="text" ng-model="vm.user.userName" required/>
+                  <div ng-messages="editlockers.userName.$error" ng-if="editlockers.$submitted && editlockers.userName.$invalid">
+                    <div ng-message when="required">
+                      <span translate>EDIT_LOCKERS.USERNAME.PLEASE_ENTER</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_LOCKERS.PROVINCE.LABEL</label>
+                    <md-select name="provice" ng-model="vm.user.provice" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editlockers.provice.$error" ng-if="editlockers.$submitted && editlockers.provice.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_LOCKERS.PROVINCE.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label translate>EDIT_LOCKERS.DISTRICT.LABEL</label>
+                    <md-select name="district" ng-model="vm.user.district" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editlockers.district.$error" ng-if="editlockers.$submitted && editlockers.district.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_LOCKERS.DISTRICT.PLEASE_ENTER</span>
+                            </div>
+                        </div> 
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label translate>EDIT_LOCKERS.CORREG.LABEL</label>
+                    <md-select name="correg" ng-model="vm.user.correg" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editlockers.correg.$error" ng-if="editlockers.$submitted && editlockers.correg.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_LOCKERS.CORREG.PLEASE_ENTER</span>
+                            </div>
+                        </div>               
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_LOCKERS.NEIGHBORHOOD.LABEL</label>
+                    <md-select name="neighborhood" ng-model="vm.user.neighborhood" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editlockers.neighborhood.$error" ng-if="editlockers.$submitted && editlockers.neighborhood.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_LOCKERS.NEIGHBORHOOD.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="street" translate>EDIT_LOCKERS.STREET.LABEL</label> 
+                    <input id="street" name="street" type="text"  ng-model="vm.user.street" required/>
+                    <div ng-messages="editlockers.street.$error" ng-if="editlockers.$submitted && editlockers.street.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_LOCKERS.STREET.PLEASE_ENTER</span>
+                            </div>
+                        </div>  
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="home" translate>EDIT_LOCKERS.HOME.LABEL</label> 
+                    <input id="home" name="home" type="text"  ng-model="vm.user.home" required/>
+                    <div ng-messages="editlockers.home.$error" ng-if="editlockers.$submitted && editlockers.home.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_LOCKERS.HOME.PLEASE_ENTER</span>
+                            </div>
+                        </div>  
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                <md-input-container flex>
+                  <label for="password" translate>EDIT_LOCKERS.PASSWORD.LABEL</label>
+                  <input id="password" label="password" name="password" type="password" ng-model="vm.user.password" tri-same-password="editlockers.confirm" ng-minlength="8" required/>
+                  <ng-messages for="editlockers.password.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="editlockers.$submitted && editlockers.password.$invalid">
+                  </ng-messages>
+                </md-input-container>
+                    <md-input-container flex>
+                        <label for="ip" translate>EDIT_LOCKERS.IP.LABEL</label>
+                        <input id="ip" name="ip" type="text" ng-model="vm.user.ip" required/>
+                          <div ng-messages="editlockers.ip.$error" ng-if="editlockers.$submitted && editlockers.ip.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_LOCKERS.IP.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                    <md-input-container flex>
+                     <label for="coordinate" translate>EDIT_LOCKERS.COORDINATES.LABEL</label>
+                      <input id="coordinate" name="coordinate" type="text" ng-model="vm.user.coordinate" required/>
+                          <div ng-messages="editlockers.coordinate.$error" ng-if="editlockers.$submitted && editlockers.coordinate.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_LOCKERS.COORDINATES.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                   
+                </div>  
+              </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_LOCKERS.BUTTON_CANCEL"  aria-label="{{'EDIT_LOCKERS.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_LOCKERS.BUTTON_SIGNUP" aria-label="{{'EDIT_LOCKERS.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

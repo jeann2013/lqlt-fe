@@ -1,0 +1,61 @@
+{
+    "MENU": {
+        "EDITLOCKERS": "Registrar Lockers"
+    },
+    "EDIT_LOCKERS": {
+        "TITLE": "Registrar Locker",
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "USERNAME": {
+            "LABEL": "Usuario",
+            "PLEASE_ENTER": "Por favor ingrese su usuario"
+        },
+        "PROVINCE": {
+            "LABEL": "Provincia",
+            "PLEASE_ENTER": "Por favor ingrese la provincia"
+        },
+        "DISTRICT": {
+            "LABEL": "Distrito",
+            "PLEASE_ENTER": "Por favor ingrese el distrito"
+        },
+        "CORREG": {
+            "LABEL": "Corregimiento",
+            "PLEASE_ENTER": "Por favor ingrese el corregimiento"
+        },
+        "NEIGHBORHOOD": {
+            "LABEL": "Barrio",
+            "PLEASE_ENTER": "Por favor ingrese el barrio"
+        },
+        "STREET": {
+            "LABEL": "Calle",
+            "PLEASE_ENTER": "Por favor ingrese la calle"
+        },
+        "HOME": {
+            "LABEL": "Edificio / Casa",
+            "PLEASE_ENTER": "Por favor ingrese su edificio o Casa"
+        },
+        "COORDINATES": {
+            "LABEL": "Coordenadas",
+            "PLEASE_ENTER": "Por favor ingrese las Coordenadas"
+        },
+        "IP": {
+            "LABEL": "IP",
+            "PLEASE_ENTER": "Por favor ingrese su IP"
+        },
+        "PASSWORD": {
+            "LABEL": "Contraseña",
+            "PLEASE_ENTER": "Por favor ingrese su password",
+            "MIN_LENGTH": "Su password debe ser mayor a 8 caracteres",
+            "SAME_PASSWORD": "Necesita ingresar el mismo password"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+

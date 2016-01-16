@@ -1,0 +1,224 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+    <md-content class="md-padding">
+      <md-card class="padded-content-page ng-scope">
+          <div ng-controller="DetailCustomerController as vm">
+            <span class="md-headline" translate>DETAIL_CUSTOMER.TITLE</span>
+            <hr>
+              <div layout="row" layout-wrap>
+                <div layout="column" flex="60"> 
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label for="firstName" translate>DETAIL_CUSTOMER.FIRSTNAME</label>
+                      <input id="firstName" name="firstName" type="text"  ng-disabled="true" ng-model="vm.user.firstName"/>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label for="lastName" translate>DETAIL_CUSTOMER.LASTNAME</label> 
+                        <input id="lastName" name="lastName" type="text" ng-disabled="true" ng-model="vm.user.lastName"/> 
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label for="gender" translate>DETAIL_CUSTOMER.GENDER</label> 
+                      <input id="gender" name="gender" type="text" ng-disabled="true" ng-model="vm.user.gender"/>
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="birthdate" translate>DETAIL_CUSTOMER.BIRTHDATE</label>
+                      <input id="birthdate" name="birthdate" type="text" ng-disabled="true" ng-model="vm.user.birthdate"/>
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label for="identification" translate>DETAIL_CUSTOMER.IDENTIFICATION</label>
+                      <input id="identification" name="identification" type="text" ng-disabled="true" ng-model="vm.user.identification"/>
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="identificationType" translate>DETAIL_CUSTOMER.TYPEIDENTIFICATION</label>
+                      <input id="identificationType" name="identificationType" type="text" ng-disabled="true" ng-model="vm.user.identificationType"/>
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label for="email" translate>DETAIL_CUSTOMER.EMAIL</label> 
+                      <input id="email" name="email" type="text" ng-disabled="true" ng-model="vm.user.email"/>
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="registrationDate" translate>DETAIL_CUSTOMER.REGISTRATIONDATE</label> 
+                      <input id="registrationDate" name="registrationDate" type="text" ng-disabled="true" ng-model="vm.user.registrationDate"/>
+                    </md-input-container>
+                  </div>  
+                  <div layout="row">
+                    <md-input-container flex>
+                      <label for="preferenceOffice" translate>DETAIL_CUSTOMER.PREFERENCE_OFFICE</label> 
+                      <input id="preferenceOffice" name="preferenceOffice" type="text" ng-disabled="true" ng-model="vm.user.preferenceOffice"/> 
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-input-container>
+                      <md-button  class="md-primary" href="#" translate="DETAIL_CUSTOMER.LINK_AUDIT" aria-label="{{'DETAIL_CUSTOMER.LINK_AUDIT' | translate}}"></md-button>
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                   <md-input-container>
+                    <md-button  class="md-primary"  translate="DETAIL_CUSTOMER.LINK_CONFIGURATION" aria-label="{{'DETAIL_CUSTOMER.LINK_CONFIGURATION' | translate}}"></md-button>
+                    </md-input-container>
+                  </div>
+                  
+                </div>
+                <div flex="40"><img ng-src="{{vm.imgPath}}"></div>
+              </div>
+            <hr>                     
+              <div layout="row" layout-wrap>
+                <div flex="auto">
+                  <span class="md-headline" translate>DETAIL_CUSTOMER.ADDRESS.TITLE</span> 
+                </div>
+                <div>
+                  <md-button  class="md-primary"  translate="DETAIL_CUSTOMER.ADDRESS.LINK" aria-label="{{'DETAIL_CUSTOMER.ADDRESS.LINK' | translate}}"></md-button>
+                </div>
+              </div>
+              <md-data-table-toolbar class="alternate" ng-show="vm.selected.length" layout-align="space-between">
+                <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
+              </md-data-table-toolbar>
+              <md-data-table-container>
+                <table md-data-table class="md-primary md-data-table" md-progress="vm.deferred">
+                  <thead md-order="vm.query.order" md-trigger="vm.onorderchange">
+                    <tr>
+                      <th name="Cod Contacto"></th>
+                      <th name="Nombre"></th>
+                      <th name="Telefono"></th>
+                      <th name="Email"></th>
+                      <th name="Direccion"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr md-auto-select ng-repeat="user in vm.users.data | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit | filter:vm.query.filter">
+                      <td>{{user.codclient}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.phone}}</td>
+                      <td>{{user.email}}</td>
+                      <td>{{user.address}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </md-data-table-container>
+              <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.users.total_count}}" md-trigger="vm.onpagechange">
+              </md-data-table-pagination>
+            <hr>                     
+              <div layout="row" layout-wrap>
+                <div flex="auto">
+                  <span class="md-headline" translate>DETAIL_CUSTOMER.ORDERS.TITLE</span> 
+                </div>
+                <div>
+                  <md-button  class="md-primary"  translate="DETAIL_CUSTOMER.ORDERS.LINK" aria-label="{{'DETAIL_CUSTOMER.ORDERS.LINK' | translate}}"></md-button>
+                  <md-button  class="md-primary"  translate="DETAIL_CUSTOMER.ORDERS.LINK_PENDING" aria-label="{{'DETAIL_CUSTOMER.ORDERS.LINK_PENDING' | translate}}"></md-button>
+                </div>
+              </div>
+              <md-data-table-toolbar class="alternate" ng-show="vm.selected.length" layout-align="space-between">
+              <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
+              </md-data-table-toolbar>
+              <md-data-table-container>
+                <table md-data-table class="md-primary md-data-table" md-progress="vm.deferred">
+                  <thead md-order="vm.query.order" md-trigger="vm.onorderchange">
+                    <tr>
+                      <th name="Cod Orden"></th>
+                      <th name="Tipo Orden"></th>
+                      <th name="U Actividad"></th>
+                      <th name="Saldo"></th>
+                      <th name="Estado"></th>
+                      <th name="Acciones"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr md-auto-select ng-repeat="order in vm.orders.data | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit | filter:vm.query.filter">
+                      <td>{{order.codorder}}</td>
+                      <td>{{order.typeorder}}</td>
+                      <td>{{order.activ}}</td>
+                      <td>{{order.balanc}}</td>
+                      <td>{{order.state}}</td>
+                      <td>{{order.actions}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </md-data-table-container>
+              <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.orders.total_count}}" md-trigger="vm.onpagechange"></md-data-table-pagination>
+            <hr>                     
+              <div layout="row" layout-wrap>
+                <div flex="auto">
+                  <span class="md-headline" translate>DETAIL_CUSTOMER.REQUEST.TITLE</span> 
+                </div>
+                <div>
+                  <md-button  class="md-primary" href="#" translate="DETAIL_CUSTOMER.REQUEST.LINK" aria-label="{{'DETAIL_CUSTOMER.REQUEST.LINK' | translate}}"></md-button>
+                  <md-button  class="md-primary" href="#" translate="DETAIL_CUSTOMER.REQUEST.LINK_REQUEST" aria-label="{{'DETAIL_CUSTOMER.REQUEST.LINK_REQUEST' | translate}}"></md-button>
+                </div>
+              </div>
+              <md-data-table-toolbar class="alternate" ng-show="vm.selected.length" layout-align="space-between">
+                 <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
+              </md-data-table-toolbar>
+              <md-data-table-container>
+                <table md-data-table class="md-primary md-data-table" md-progress="vm.deferred">
+                  <thead md-order="vm.query.order" md-trigger="vm.onorderchange">
+                    <tr>
+                      <th name="Cod Pedido"></th>
+                      <th name="Tipo Orden"></th>
+                      <th name="U Actividad"></th>
+                      <th name="Saldo"></th>
+                      <th name="Estado"></th>
+                      <th name="Acciones"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr md-auto-select ng-repeat="requ in vm.request.data | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit | filter:vm.query.filter">
+                      <td>{{requ.codrequest}}</td>
+                      <td>{{requ.typeorder}}</td>
+                      <td>{{requ.activ}}</td>
+                      <td>{{requ.balanc}}</td>
+                      <td>{{requ.state}}</td>
+                      <td>{{requ.actions}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </md-data-table-container>
+              <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.orders.total_count}}" md-trigger="vm.onpagechange"></md-data-table-pagination>
+            <hr>                     
+            <div layout="row" layout-wrap>
+              <div flex="auto">
+                <span class="md-headline" translate>DETAIL_CUSTOMER.DEPOSITS.TITLE</span> 
+              </div>
+              <div>
+                <md-button  class="md-primary" href="#" translate="DETAIL_CUSTOMER.DEPOSITS.LINK"></md-button>
+              </div>
+            </div>
+              <md-data-table-toolbar class="alternate" ng-show="vm.selected.length" layout-align="space-between">
+              <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
+              </md-data-table-toolbar>
+              <md-data-table-container>
+              <table md-data-table class="md-primary md-data-table" md-progress="vm.deferred">
+                <thead md-order="vm.query.order" md-trigger="vm.onorderchange">
+                  <tr>
+                    <th name="Cod"></th>
+                    <th name="Metodo Pago"></th>
+                    <th name="Fecha"></th>
+                    <th name="Monto"></th>
+                    <th name="Estado"></th>
+                    <th name="Acciones"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr md-auto-select ng-repeat="deposit in vm.deposits.data | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit | filter:vm.query.filter">
+                    <td>{{deposit.coddeposits}}</td>
+                    <td>{{deposit.method}}</td>
+                    <td>{{deposit.date}}</td>
+                    <td>{{deposit.amount}}</td>
+                    <td>{{deposit.state}}</td>
+                    <td>{{deposit.actions}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              </md-data-table-container>
+              <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="  {{vm.orders.total_count}}" md-trigger="vm.onpagechange">
+              </md-data-table-pagination>
+          </div>
+      </md-card>
+    </md-content>
+  </div>
+</div>

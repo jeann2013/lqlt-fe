@@ -1,0 +1,18 @@
+{
+    "MENU": {
+        "EDITFORMALITIES": "Registro Tramite"
+    },
+    "EDIT_FORMALITIES": {
+        "TITLE": "Registro de Tramite y Manejo",
+        "FORMALITIES": {
+            "LABEL": "Tramite",
+            "PLEASE_ENTER": "Por favor ingrese el tramite"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

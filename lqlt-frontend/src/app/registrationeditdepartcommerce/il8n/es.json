@@ -1,0 +1,18 @@
+{
+    "MENU": {
+        "EDITDEPARTCOMMERCE": "Registro y edic. Departamento"
+    },
+    "EDIT_DEPARTCOMMERCE": {
+        "TITLE": "Registro de Departamento",
+        "DEPARTMENT": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese el departamento"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

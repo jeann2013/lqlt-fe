@@ -1,0 +1,45 @@
+{
+   "MENU": {
+        "DETAILCUSTOMER": {
+            "DETAILCUSTOMER": "Detalle de Cuenta de Clientes",
+            "DETAIL_CUSTOMER": "Detalle de cuenta"
+        }
+    },
+    "DETAIL_CUSTOMER": {
+        "TITLE": "Detalle de cuenta:",
+        "FIRSTNAME": "Nombre",
+        "LASTNAME": "Apellido",
+        "BIRTHDATE":"Fecha de Nacimiento",
+        "GENDER":"Sexo",
+        "IDENTIFICATION":"Identificacion",
+        "TYPEIDENTIFICATION":"Tipo Identificacion",
+        "EMAIL": "Email",
+        "REGISTRATIONDATE": "Fecha Registro",
+        "PREFERENCE_OFFICE":"Sucursal de preferencia",
+        "LINK_AUDIT": "Ver actividad sobre la cuenta",
+        "LINK_CONFIGURATION": "Configuraciones especiales",
+        "ADDRESS": {
+            "TITLE": "Direccion de entrega",
+            "LINK": "Agregar nuevo contacto"
+           
+        },
+        "ORDERS": {
+            "TITLE": "Ordenes Activas",
+            "LINK": "Orenes Anteriores",
+            "LINK_PENDING": "Pendiente de Feedback"
+        },
+        "REQUEST": {
+            "TITLE": "Pedidos Activos",
+            "LINK": "Agregar Pedido",
+            "LINK_REQUEST": "Pedidos Anteriores"
+        },
+        "DEPOSITS": {
+            "TITLE": "Depositos o Pagos",
+            "LINK": "Registrar Deposito o Realizar Pago"
+        }
+
+    }
+}
+
+
+

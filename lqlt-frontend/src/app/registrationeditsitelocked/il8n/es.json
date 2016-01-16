@@ -1,0 +1,22 @@
+{
+    "MENU": {
+        "EDITSITELOCKED": "Registro Sitio"
+    },
+    "EDIT_SITELOCKED": {
+        "TITLE": "Registro de Sitios Bloqueados",
+        "NAME": {
+            "LABEL": " Nombre",
+            "PLEASE_ENTER": "Por favor ingrese el nombre"
+        },
+        "URL": {
+            "LABEL": "URL",
+            "PLEASE_ENTER": "Por favor ingrese el URL"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

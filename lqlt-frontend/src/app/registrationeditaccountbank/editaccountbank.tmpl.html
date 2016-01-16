@@ -1,0 +1,117 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editaccountbank" ng-submit="editaccountbank.$valid && vm.editaccountbankClick()" novalidate>
+            <span class="md-headline" translate>EDIT_ACCOUNTBANK.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                      <label for="bank" translate>EDIT_ACCOUNTBANK.BANK.LABEL</label>
+                      <input id="bank" name="bank" type="text" ng-model="vm.user.bank" required/>
+                        <div ng-messages="editaccountbank.bank.$error" ng-if="editaccountbank.$submitted && editaccountbank.bank.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ACCOUNTBANK.BANK.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="account" translate>EDIT_ACCOUNTBANK.ACCOUNTNUMBER.LABEL</label>
+                      <input id="account" name="account" type="text" ng-model="vm.user.account" required/>
+                        <div ng-messages="editaccountbank.account.$error" ng-if="editaccountbank.$submitted && editaccountbank.account.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ACCOUNTBANK.ACCOUNTNUMBER.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_ACCOUNTBANK.TYPE.LABEL</label>
+                    <md-select name="type" ng-model="vm.user.type" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editaccountbank.type.$error" ng-if="editaccountbank.$submitted && editaccountbank.type.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ACCOUNTBANK.TYPE.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.chkcliente" id="chkcliente">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.CHK_CLIENT</span>
+                      </md-checkbox>
+                  </div>
+                </div>
+
+                <div flex><hr></div>
+                <span  translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.TITLE</span>
+                      
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment1" id="payment1">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL1</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment5" id="payment5">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL5</span>
+                        </md-checkbox>
+                  </div>
+                  
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment2" id="payment2">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL2</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment6" id="payment6">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL6</span>
+                        </md-checkbox>
+                  </div>
+                  
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment3" id="payment3">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL3</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment7" id="payment7">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL7</span>
+                        </md-checkbox>
+                  </div>
+                   
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment4" id="payment4">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL4</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment8" id="payment8">
+                              <span class="md-info" translate>EDIT_ACCOUNTBANK.PAYMENTMETHOD.LABEL8</span>
+                        </md-checkbox>
+                  </div>
+                   
+                </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_ACCOUNTBANK.BUTTON_CANCEL"  aria-label="{{'EDIT_ACCOUNTBANK.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_ACCOUNTBANK.BUTTON_SIGNUP" aria-label="{{'EDIT_ACCOUNTBANK.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

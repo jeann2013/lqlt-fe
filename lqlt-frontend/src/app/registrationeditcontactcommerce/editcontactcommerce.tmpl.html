@@ -1,0 +1,83 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editcontactcommerce" ng-submit="editcontactcommerce.$valid && vm.editcontactcommerceClick()" novalidate>
+            <span class="md-headline" translate>EDIT_CONTACTCOMMERCE.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="firstName" translate>EDIT_CONTACTCOMMERCE.FIRSTNAME.LABEL</label>
+                    <input id="firstName" name="firstName" type="text" ng-model="vm.user.firstName" required/>
+                        <div ng-messages="editcontactcommerce.firstName.$error" ng-if="editcontactcommerce.$submitted && editcontactcommerce.firstName.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CONTACTCOMMERCE.FIRSTNAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label for="lastName" translate>EDIT_CONTACTCOMMERCE.LASTNAME.LABEL</label> 
+                    <input id="lastName" name="lastName" type="text"  ng-model="vm.user.lastName"required/>
+                        <div ng-messages="editcontactcommerce.lastName.$error" ng-if="editcontactcommerce.$submitted && editcontactcommerce.lastName.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CONTACTCOMMERCE.LASTNAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container >       
+                </div>
+                <div layout="row">
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCOMMERCE.ADDRESS.LABEL</label>
+                      <md-select name="address" ng-model="vm.user.address" required>
+                      <md-option value="1">Valor1</md-option>
+                      </md-select>
+                         <div ng-messages="editcontactcommerce.address.$error" ng-if="editcontactcommerce.$submitted && editcontactcommerce.address.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCOMMERCE.ADDRESS.PLEASE_ENTER</span>
+                              </div>
+                          </div>                     
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label translate>EDIT_CONTACTCOMMERCE.DEPARTMENT.LABEL</label>
+                      <md-select name="department" ng-model="vm.user.department" required>
+                      <md-option value="1">Valor1</md-option>
+                      </md-select>
+                         <div ng-messages="editcontactcommerce.department.$error" ng-if="editcontactcommerce.$submitted && editcontactcommerce.department.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CONTACTCOMMERCE.DEPARTMENT.PLEASE_ENTER</span>
+                              </div>
+                          </div>                     
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="phone" translate>EDIT_CONTACTCOMMERCE.PHONE</label> 
+                      <input id="phone" name="phone" type="text"  ng-model="vm.user.phone"/>
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label for="cellPhone" translate>EDIT_CONTACTCOMMERCE.CELLPHONE.LABEL</label>
+                      <input id="cellPhone" name="cellPhone" type="text"  ng-model="vm.user.cellPhone"required/>
+                        <div ng-messages="editcontactcommerce.cellPhone.$error" ng-if="editcontactcommerce.$submitted && editcontactcommerce.cellPhone.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CONTACTCOMMERCE.CELLPHONE.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                    </md-input-container>
+                   
+                </div>
+                 <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_CONTACTCOMMERCE.BUTTON_CANCEL"  aria-label="{{'EDIT_CONTACTCOMMERCE.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_CONTACTCOMMERCE.BUTTON_SIGNUP" aria-label="{{'EDIT_CONTACTCOMMERCE.BUTTON_SIGNUP' | translate}}"></md-button>
+                  </div>
+
+              </div>
+  
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

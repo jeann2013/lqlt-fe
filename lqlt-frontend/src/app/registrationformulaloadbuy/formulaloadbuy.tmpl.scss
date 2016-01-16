@@ -1,0 +1,25 @@
+fieldset.standard {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    color: #C0C0C0;
+}
+legend {
+    color: rgba(0,0,0,0.87);
+}
+
+.vdivide{
+    margin-left: 12px;
+}

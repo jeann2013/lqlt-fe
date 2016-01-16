@@ -1,0 +1,18 @@
+{
+    "MENU": {
+        "EDITORDERSTATUS": "Registro Estados"
+    },
+    "EDIT_ORDERSTATUS": {
+        "TITLE": "Registro de Estado de Orden",
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese el nombre"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

@@ -1,0 +1,55 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editoshelves" ng-submit="editoshelves.$valid && vm.editoshelvesClick()" novalidate>
+            <span class="md-headline" translate>EDIT_SHELVES.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label for="identification" translate>EDIT_SHELVES.IDENTIFICATION.LABEL</label>
+                    <input id="identification" name="identification" type="text" ng-model="vm.user.identification" required />
+                    <div ng-messages="editoshelves.identification.$error" ng-if="editoshelves.$submitted && editoshelves.identification.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_SHELVES.IDENTIFICATION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                   <md-input-container flex>
+                      <label for="level" translate>EDIT_SHELVES.LEVELS.LABEL</label>
+                      <input id="level" name="level" type="text" ng-model="vm.user.level" required/>
+                      <div ng-messages="editoshelves.level.$error" ng-if="editoshelves.$submitted && editoshelves.level.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_SHELVES.LEVELS.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                    </md-input-container >
+                </div>
+                <br>
+               <md-data-table-container>
+                <table md-data-table class="md-primary md-data-table" md-progress="vm.deferred">
+                  <tbody>
+                    <tr md-auto-select ng-repeat="shelves in vm.shelvesoffice.data">
+                      <td>{{shelves.level}}</td>
+                      <td>  <input id="quantity" name="quantity" type="text" ng-model="vm.user.quantity" /></td>
+                      <td>{{shelves.sequence}}</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </md-data-table-container> 
+              </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_SHELVES.BUTTON_CANCEL"  aria-label="{{'EDIT_SHELVES.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_SHELVES.BUTTON_SIGNUP" aria-label="{{'EDIT_SHELVES.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

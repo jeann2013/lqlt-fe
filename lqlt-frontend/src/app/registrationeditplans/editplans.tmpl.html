@@ -1,0 +1,53 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editplans" ng-submit="editplans.$valid && vm.profileClick()" novalidate>
+            <span class="md-headline" translate>EDIT_PLANS.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label for="name" translate>EDIT_PLANS.NAME.LABEL</label>
+                    <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                      <div ng-messages="editplans.name.$error" ng-if="editplans.$submitted && editplans.name.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_PLANS.NAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                   <md-input-container flex>
+                    <label for="amount" translate>EDIT_PLANS.AMOUNT.LABEL</label>
+                    <input id="amount" name="amount" type="text" ng-model="vm.user.amount" required/>
+                      <div ng-messages="editplans.amount.$error" ng-if="editplans.$submitted && editplans.amount.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_PLANS.AMOUNT.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                     <label for="daycourt" translate>EDIT_PLANS.DAYCOURT.LABEL</label> 
+                    <md-select name="daycourt" ng-model="vm.user.daycourt" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editplans.daycourt.$error" ng-if="editplans.$submitted && editplans.daycourt.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_PLANS.DAYCOURT.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>  
+                </div>
+              </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_PLANS.BUTTON_CANCEL"  aria-label="{{'EDIT_PLANS.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_PLANS.BUTTON_SIGNUP" aria-label="{{'EDIT_PLANS.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

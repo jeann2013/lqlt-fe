@@ -1,0 +1,51 @@
+{
+    "MENU": {
+        "SETTINGCLIENT": "Configuraciones Especiales"
+    },
+    "SETTING_CLIENT": {
+        "TITLE": "Configuracion especial a Clientes",
+        "CHK_LIMIT": "Limite Credito?",
+        "LIMIT": {
+            "TITLE": "Tiene limites de credito",
+            "LABEL_CREDIT": "Limite Credito",
+            "PLEASE_CREDIT": "Por favor ingrese su limite credito",
+            "LABEL_VIGEN": "Limite Vigente (dias)",
+            "PLEASE_VIGEN": "Por favor ingrese su limite vigente"
+        },
+        "CHK_ABONO": "Abono fijo?",
+        "ABONO": {
+            "TITLE": "Tiene un abono fijo por cumplir",
+            "LABEL":  "Porcentaje fijo a pagar de abono en sus ordenes",
+            "PLEASE": "Por favor ingrese su abono fijo"
+            
+        },
+        "CHK_ACCOUNT": "Es una cuenta recurrente?",
+        "ACCOUNT": {
+            "TITLE": "Opciones avanzadas",
+            "LABEL": "Plan",
+            "PLEASE": "Por favor ingrese su plan"
+            
+        },
+        "INFORMATION": "Informacion de cobro",
+        "NUMBER_DEBIT": {
+            "LABEL": "Numero de cuenta a debitar",
+            "PLEASE": "Por favor ingrese su numero de cuenta a debitar"
+            
+        },
+        "EMAIL": {
+            "LABEL": "Email de notificacion",
+            "PLEASE_ENTER": "Por favor ingrese su dirección de correo electrónico",
+            "PLEASE_VALID": "Por favor ingrese una dirección de correo electrónico válida"
+            
+        },
+        "EXPIRATION_DATE": {
+            "LABEL": "Fecha vencimiento",
+            "PLEASE": "Por favor ingrese su fecha vencimiento"
+            
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+

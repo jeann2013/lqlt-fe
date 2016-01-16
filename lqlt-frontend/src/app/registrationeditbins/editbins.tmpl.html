@@ -1,0 +1,59 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editbins" ng-submit="editbins.$valid && vm.editbinsClick()" novalidate>
+            <span class="md-headline" translate>EDIT_BINS.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                      <label for="name" translate>EDIT_BINS.NAME.LABEL</label>
+                      <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                        <div ng-messages="editbins.name.$error" ng-if="editbins.$submitted && editbins.name.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_BINS.NAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                   <md-input-container flex>
+                    <label translate>EDIT_BINS.ALLYPAYMENT.LABEL</label>
+                    <md-select name="allypayment" ng-model="vm.user.allypayment" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editbins.allypayment.$error" ng-if="editbins.$submitted && editbins.allypayment.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_BINS.ALLYPAYMENT.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                   <md-input-container flex="50">
+                    <label translate>EDIT_BINS.TYPESERVICE.LABEL</label>
+                    <md-select name="typeservice" ng-model="vm.user.typeservice" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editbins.typeservice.$error" ng-if="editbins.$submitted && editbins.typeservice.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_BINS.TYPESERVICE.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                </div>
+              </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_BINS.BUTTON_CANCEL"  aria-label="{{'EDIT_BINS.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_BINS.BUTTON_SIGNUP" aria-label="{{'EDIT_BINS.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

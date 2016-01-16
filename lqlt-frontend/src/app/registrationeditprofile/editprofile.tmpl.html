@@ -1,0 +1,83 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editprofile" ng-submit="editprofile.$valid && vm.profileClick()" novalidate>
+            <span class="md-headline" translate>EDIT_PROFILE.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="name" translate>EDIT_PROFILE.NAME.LABEL</label>
+                    <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                      <div ng-messages="editprofile.name.$error" ng-if="editprofile.$submitted && editprofile.name.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_PROFILE.NAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                </div>
+                 <div flex><hr></div>
+                 <span class="md-headline" translate>EDIT_PROFILE.FORMULA</span>
+                <div layout="row"  layout-wrap>
+                  <md-input-container flex>
+                     <label for="receive" translate>EDIT_PROFILE.RECEIVES.LABEL</label> 
+                    <md-select name="receive" ng-model="vm.user.receive" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editprofile.receive.$error" ng-if="editprofile.$submitted && editprofile.receive.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_PROFILE.RECEIVES.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                   <md-input-container flex>
+                     <label for="buy" translate>EDIT_PROFILE.BUY.LABEL</label> 
+                    <md-select name="buy" ng-model="vm.user.buy" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editprofile.buy.$error" ng-if="editprofile.$submitted && editprofile.buy.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_PROFILE.BUY.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>          
+                </div>
+                <div layout="row"  layout-wrap>
+                  <md-input-container flex>
+                     <label for="load" translate>EDIT_PROFILE.LOAD.LABEL</label> 
+                    <md-select name="load" ng-model="vm.user.load" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editprofile.load.$error" ng-if="editprofile.$submitted && editprofile.load.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_PROFILE.LOAD.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                   <md-input-container flex>
+                     <label for="delivery" translate>EDIT_PROFILE.DELIVERY.LABEL</label> 
+                    <md-select name="delivery" ng-model="vm.user.delivery" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editprofile.delivery.$error" ng-if="editprofile.$submitted && editprofile.delivery.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_PROFILE.DELIVERY.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>          
+                </div>
+              </div>
+                <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="EDIT_PROFILE.BUTTON_CANCEL"  aria-label="{{'EDIT_PROFILE.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="EDIT_PROFILE.BUTTON_SIGNUP" aria-label="{{'EDIT_PROFILE.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

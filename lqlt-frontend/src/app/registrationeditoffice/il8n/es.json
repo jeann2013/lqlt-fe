@@ -1,0 +1,68 @@
+{
+    "MENU": {
+        "EDITOFFICE": "Registrar Sucursales"
+    },
+    "EDIT_OFFICE": {
+        "TITLE": "Registrar Sucursar",
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "EMAIL": {
+            "LABEL": "Email",
+            "PLEASE_ENTER": "Por favor ingrese su dirección de correo electrónico",
+            "PLEASE_VALID": "Por favor ingrese una dirección de correo electrónico válida"
+        },
+        "PROVINCE": {
+            "LABEL": "Provincia",
+            "PLEASE_ENTER": "Por favor ingrese la provincia"
+        },
+        "DISTRICT": {
+            "LABEL": "Distrito",
+            "PLEASE_ENTER": "Por favor ingrese el distrito"
+        },
+        "CORREG": {
+            "LABEL": "Corregimiento",
+            "PLEASE_ENTER": "Por favor ingrese el corregimiento"
+        },
+        "NEIGHBORHOOD": {
+            "LABEL": "Barrio",
+            "PLEASE_ENTER": "Por favor ingrese el barrio"
+        },
+        "STREET": {
+            "LABEL": "Calle",
+            "PLEASE_ENTER": "Por favor ingrese la calle"
+        },
+        "HOME": {
+            "LABEL": "Edificio / Casa",
+            "PLEASE_ENTER": "Por favor ingrese su edificio o Casa"
+        },
+        "COORDINATES": {
+            "LABEL": "Coordenadas",
+            "PLEASE_ENTER": "Por favor ingrese las Coordenadas"
+        },
+        "RUC": {
+            "LABEL": "RUC",
+            "PLEASE_ENTER": "Por favor ingrese su RUC"
+        },
+        "BUSINESS_NAME": {
+            "LABEL": "Razon Social",
+            "PLEASE_ENTER": "Por favor ingrese su razon social"
+        },
+         "DV": {
+            "LABEL": "DV",
+            "PLEASE_ENTER": "Por favor ingrese su DV"
+        },
+        "CONTACT": {
+            "LABEL": "Contacto",
+            "PLEASE_ENTER": "Por favor ingrese su contacto"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+

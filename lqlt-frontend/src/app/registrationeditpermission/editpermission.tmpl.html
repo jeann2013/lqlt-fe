@@ -1,0 +1,136 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+        <form name="editpermission" ng-submit="editpermission.$valid && vm.editpermissionClick()" novalidate>
+          <span class="md-headline" translate>EDIT_PERMISSION.TITLE</span>
+          <hr>
+            <div layout="column" > 
+              <div layout="row">
+                <md-input-container flex>
+                  <label for="firstName" translate>EDIT_PERMISSION.FIRSTNAME.LABEL</label>
+                  <input id="firstName" name="firstName" type="text" ng-model="vm.user.firstName" required/>
+                      <div ng-messages="editpermission.firstName.$error" ng-if="editpermission.$submitted && editpermission.firstName.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_PERMISSION.FIRSTNAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+              </div>
+              <div layout="row" layout-wrap >
+                <div flex>
+                   <md-checkbox ng-model="vm.user.client" id="client">
+                            <span class="md-info" translate>EDIT_PERMISSION.CLIENTS</span>
+                    </md-checkbox>
+                </div>
+                  <div flex>
+                    <md-checkbox ng-model="vm.user.followup" id="followup">
+                            <span class="md-info" translate>EDIT_PERMISSION.FOLLOWUP</span>
+                      </md-checkbox>
+                </div>
+              </div>
+              <div layout="row" layout-wrap>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.setProfile" id="setProfile">
+                    <span class="md-info" translate>EDIT_PERMISSION.SET_PROFILES</span>
+                  </md-checkbox>
+                </div>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.claims" id="claims">
+                    <span class="md-info" translate>EDIT_PERMISSION.CLAIMS</span>
+                    </md-checkbox>
+                </div>
+              </div>
+              <div layout="row" layout-wrap>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.setManager" id="setManager">
+                    <span class="md-info" translate>EDIT_PERMISSION.SET_MANAGERS</span>
+                  </md-checkbox>
+                </div>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.delivery" id="delivery">
+                    <span class="md-info" translate>EDIT_PERMISSION.DELIVERY</span>
+                  </md-checkbox>
+                </div>
+              </div>
+              <div layout="row" layout-wrap>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.setCategorie" id="setCategorie">
+                    <span class="md-info" translate>EDIT_PERMISSION.SET_CATEGORIES</span>
+                  </md-checkbox>
+                </div>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.cellar" id="cellar">
+                    <span class="md-info" translate>EDIT_PERMISSION.CELLAR</span>
+                  </md-checkbox>
+                </div>
+              </div>
+              <div layout="row" layout-wrap>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.requested" id="requested">
+                    <span class="md-info" translate>EDIT_PERMISSION.REQUESTED</span>
+                  </md-checkbox>
+                </div>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.payment" id="payment">
+                    <span class="md-info" translate>EDIT_PERMISSION.PAYMENTS</span>
+                  </md-checkbox>
+                </div>
+              </div>
+              <div layout="row" layout-wrap>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.order" id="order">
+                    <span class="md-info" translate>EDIT_PERMISSION.ORDERS</span>
+                  </md-checkbox>
+                </div>
+                <div flex>
+                  <md-checkbox ng-model="vm.user.bankTransaction" id="bankTransaction">
+                    <span class="md-info" translate>EDIT_PERMISSION.BANKTRANSACTIONS</span>
+                  </md-checkbox>
+                </div>
+              </div>
+            </div> 
+              <hr>
+              
+            <div layout="row" flex> 
+              <div layout="column" flex>
+                <span class="md-headline" translate>EDIT_PERMISSION.AUTHORIZATIONLEVEL</span>
+              
+                   <md-checkbox ng-model="vm.user.deliveryOld" id="deliveryOld">
+                            <span class="md-info" translate>EDIT_PERMISSION.DELIVERY_OLD</span>
+                    </md-checkbox>
+               
+                
+                    <md-checkbox ng-model="vm.user.adjusting" id="adjusting">
+                            <span class="md-info" translate>EDIT_PERMISSION.ADJUSTING</span>
+                      </md-checkbox>
+                </div>
+              
+              <div layout="column" flex>
+               <span class="md-headline" translate>EDIT_PERMISSION.DISCOUNT</span>
+               
+                   <md-checkbox ng-model="vm.user.service" id="service">
+                            <span class="md-info" translate>EDIT_PERMISSION.SERVICE</span>
+                    </md-checkbox>
+               
+                 
+                    <md-checkbox ng-model="vm.user.pound" id="pound">
+                            <span class="md-info" translate>EDIT_PERMISSION.POUNDS</span>
+                      </md-checkbox>
+                </div>
+            </div>
+         
+            <div layout="row" layout-align="center center">
+              <md-button  class="md-raised md-warn " translate="EDIT_PERMISSION.BUTTON_CANCEL"  aria-label="{{'EDIT_PERMISSION.BUTTON_CANCEL' | translate}}"></md-button>
+              
+             
+              <md-button class="md-raised md-primary"  translate="EDIT_PERMISSION.BUTTON_SIGNUP" aria-label="{{'EDIT_PERMISSION.BUTTON_SIGNUP' | translate}}"></md-button>
+            </div>
+  
+        </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

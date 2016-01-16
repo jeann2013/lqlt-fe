@@ -1,0 +1,141 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="areadelivery" ng-submit="areadelivery.$valid && vm.areadeliveryClick()" novalidate>
+            <span class="md-headline" translate>AREA_DELIVERY.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                <md-input-container flex>
+                      <label for="name" translate>AREA_DELIVERY.NAME.LABEL</label>
+                      <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                        <div ng-messages="areadelivery.name.$error" ng-if="areadelivery.$submitted && areadelivery.name.$invalid">
+                            <div ng-message when="required">
+                                <span translate>AREA_DELIVERY.NAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="price" translate>AREA_DELIVERY.PRICEPOUND.LABEL</label>
+                      <input id="price" name="price" type="text" ng-model="vm.user.price" required/>
+                        <div ng-messages="areadelivery.price.$error" ng-if="areadelivery.$submitted && areadelivery.price.$invalid">
+                            <div ng-message when="required">
+                                <span translate>AREA_DELIVERY.PRICEPOUND.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>AREA_DELIVERY.PROVINCE.LABEL</label>
+                    <md-select name="provice" ng-model="vm.user.provice" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="areadelivery.provice.$error" ng-if="areadelivery.$submitted && areadelivery.provice.$invalid">
+                            <div ng-message when="required">
+                                <span translate>AREA_DELIVERY.PROVINCE.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                  <md-input-container flex>
+                    <label translate>AREA_DELIVERY.DISTRICT.LABEL</label>
+                    <md-select name="district" ng-model="vm.user.district" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="areadelivery.district.$error" ng-if="areadelivery.$submitted && areadelivery.district.$invalid">
+                            <div ng-message when="required">
+                                <span translate>AREA_DELIVERY.DISTRICT.PLEASE_ENTER</span>
+                            </div>
+                        </div> 
+                  </md-input-container>
+                 
+                </div>
+                <br>
+                <span  translate>AREA_DELIVERY.CORREG.TITLE</span>
+                      <div ng-messages ng-if="areadelivery.$submitted && !vm.user.correg1 && !vm.user.correg2&& !vm.user.correg3 && !vm.user.correg4 && !vm.user.correg5 && !vm.user.correg6 && !vm.user.correg7&& !vm.user.correg8 && !vm.user.correg9 && !vm.user.correg10 && !vm.user.correg11 && !vm.user.correg12" >
+                        <span class="outter-error-box" translate>AREA_DELIVERY.CORREG.PLEASE_ENTER</span>
+                      </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.correg1" id="correg1">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL1</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.correg5" id="correg5">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL5</span>
+                        </md-checkbox>
+                  </div>
+                   <div flex>
+                      <md-checkbox ng-model="vm.user.correg9" id="correg9">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL9</span>
+                        </md-checkbox>
+                  </div>
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.correg2" id="correg2">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL2</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.correg6" id="correg6">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL6</span>
+                        </md-checkbox>
+                  </div>
+                   <div flex>
+                      <md-checkbox ng-model="vm.user.correg10" id="correg10">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL10</span>
+                        </md-checkbox>
+                  </div>
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.correg3" id="correg3">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL3</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.correg7" id="correg7">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL7</span>
+                        </md-checkbox>
+                  </div>
+                   <div flex>
+                      <md-checkbox ng-model="vm.user.correg11" id="correg11">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL11</span>
+                        </md-checkbox>
+                  </div>
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.correg4" id="correg4">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL4</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.correg8" id="correg8">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL8</span>
+                        </md-checkbox>
+                  </div>
+                   <div flex>
+                      <md-checkbox ng-model="vm.user.correg12" id="correg12">
+                              <span class="md-info" translate>AREA_DELIVERY.CORREG.LABEL12</span>
+                        </md-checkbox>
+                  </div>
+                </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="AREA_DELIVERY.BUTTON_CANCEL"  aria-label="{{'AREA_DELIVERY.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="AREA_DELIVERY.BUTTON_SIGNUP" aria-label="{{'AREA_DELIVERY.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

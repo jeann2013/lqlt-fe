@@ -1,0 +1,53 @@
+{
+    "MENU": {
+        "FORMULADELIVERY": "Registro de Formula Entrega Por ti"
+    },
+    "FORMULA_DELIVERY": {
+        "TITLE": "Registro de Formula para Servicio de Entrega Por ti",
+        "DESCRIPTION": {
+            "LABEL": "Descripcion",
+            "PLEASE_ENTER": "Por favor ingrese su descripcion"
+        },
+        "AIR_TRANSPORT": "Para el Transporte Aereo",
+        "AIR_SHIPPING": {
+            "LABEL":"Porcentaje de Envio",
+            "PLEASE_ENTER": "Por favor ingrese su Porcentaje de Envio"
+        },
+        "AIR_ITBMS": {
+            "LABEL":"Porcentaje de ITBMS",
+            "PLEASE_ENTER": "Por favor ingrese su Porcentaje de ITBMS"
+        },
+        "AIR_INSURANCE": {
+            "LABEL":"Seguro",
+            "PLEASE_ENTER": "Por favor ingrese su Seguro"
+        },
+        "AIR_PRICERANGE": "Rango de Libras por Precio",
+        "TEST": "Prueba",
+        "REAL": {
+            "LABEL":"Lbs Reales",
+            "PLEASE_ENTER": "Por favor ingrese su Lbs Reales"
+        },
+        "VOLUME": {
+            "LABEL":"Lbs volumen",
+            "PLEASE_ENTER": "Por favor ingrese su Lbs volumen"
+        },
+        "REGIONTYPE": {
+            "LABEL":"Region",
+            "PLEASE_ENTER": "Por favor ingrese su Region"
+        },
+        "CALCULATION": {
+            "TITLE": "Calculo de Prueba",
+            "POUNDS":"Por Libras",
+            "PROCESSED":"Por Tramite",
+            "ITBMS":"Por ITBMS",
+            "TOTAL":"Total"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+

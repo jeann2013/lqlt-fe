@@ -1,0 +1,15 @@
+{
+   "MENU": {
+        "CLIENTCOMMERCE": "Listado de Clientes"
+    },
+    "CLIENT_COMMERCE": {
+        "TITLE": "Listado de clientes",
+        "SEARCH": "Buscar",
+        "CLIENT_LINK": "Agregar Cuenta Personal",
+        "COMMERCE_LINK": "Agregar Cuenta Comercial"
+
+    }
+}
+
+
+

@@ -1,0 +1,35 @@
+<div layout="row" flex layout-padding layout-fill layout-align="center center">
+    <div flex="40" flex-lg="50" flex-md="70" flex-sm="100">
+        <md-card>
+            <md-toolbar>
+                <div class="padding-20 text-center">
+                    <div><img ng-src="{{::vm.triSettings.logo}}" alt="{{vm.triSettings.name}}"></div>
+                    <h1 class="md-headline" translate>CHANGEPASS.TITLE</h1>
+                </div>
+            </md-toolbar>
+
+            <md-content class="md-padding">
+                <form name="changepass" ng-submit="changepass.$valid && vm.user.agreeToLicense && vm.changepassClick()" novalidate>
+                    <md-input-container>
+                        <label for="password" translate>CHANGEPASS.PASSWORD.LABEL</label>
+                        <input id="password" label="password" name="password" type="password" ng-model="vm.user.password" tri-same-password="changepass.confirm" ng-minlength="8" required/>
+                        <ng-messages for="changepass.password.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="changepass.$submitted && changepass.password.$invalid"></ng-messages>
+                    </md-input-container>
+                    <md-input-container>
+                        <label for="password" translate>CHANGEPASS.PASSWORD_CONFIRM.LABEL</label>
+                        <input id="confirmPassword" label="confirmPassword" name="confirmPassword" type="password" ng-model="vm.user.confirmPassword" tri-same-password="changepass.password" ng-minlength="8" required/>
+                        <ng-messages for="changepass.confirmPassword.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="changepass.$submitted && changepass.password.$valid && changepass.confirmPassword.$invalid"></ng-messages>
+                    </md-input-container>
+                    <md-checkbox ng-model="vm.user.agreeToLicense" id="agreeToLicense">
+                        <span class="md-info" translate>CHANGEPASS.AGREE_TO_LICENSE.LABEL</span>
+                    </md-checkbox>
+                    <ng-messages for="vm.user.agreeToLicense" ng-if="changepass.$submitted && changepass.$valid && !vm.user.agreeToLicense">
+                        <div class="outter-error-box"  translate>CHANGEPASS.AGREE_TO_LICENSE.PLEASE_AGREE_BEFORE</div>
+                    </ng-messages>
+                    <md-button class="md-raised md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10" translate="CHANGEPASS.BUTTON" aria-label="{{'CHANGEPASS.BUTTON' | translate}}"></md-button>
+                     <p class="md-info"  translate>CHANGEPASS.MESSAGES.INFO</p>
+                </form>
+            </md-content>
+        </md-card>
+    </div>
+</div>

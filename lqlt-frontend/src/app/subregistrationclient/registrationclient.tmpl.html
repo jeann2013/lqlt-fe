@@ -1,0 +1,126 @@
+<div layout="row" flex layout-padding layout-fill layout-align="center center">
+    <div flex="40" flex-lg="50" flex-md="70" flex-sm="100">
+        <md-card>
+            <md-toolbar>
+                <div class="padding-20 text-center">
+                    <div><img ng-src="{{::vm.triSettings.logo}}" alt="{{vm.triSettings.name}}"></div>
+                    <h2 class="md-headline" translate>CLIENT.TITLE</h2>
+                </div>
+            </md-toolbar>
+
+            <md-content class="md-padding">
+                
+                    <div layout="row">
+                        <p translate>CLIENT.TYPE_ACCOUNT</p>
+                    <md-radio-group  layout="row" class="md-primary" ng-model="data.typeaccount" ng-init="data.typeaccount = '1'">
+                        <md-radio-button value="1">Personal</md-radio-button>
+                         <md-radio-button value="2">Comercial</md-radio-button>
+                    </md-radio-group>   
+                     </div>
+
+                     <div ng-if="data.typeaccount==1">
+                      <form name="client" ng-submit="client.$valid && vm.clientClick()" novalidate> 
+                       <md-input-container>
+                            <label translate>CLIENT.IDENTIFICATION_TYPE.LABEL</label>
+                              <md-select name="identype" ng-model="vm.user.identype" required>
+                                <md-option value="1">Cédula</md-option>
+                                <md-option value="2">Pasaporte</md-option>
+                              </md-select>
+                            <div ng-messages="client.identype.$error" ng-if="client.$submitted && client.identype.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>CLIENT.IDENTIFICATION_TYPE.PLEASE_ENTER</span>
+                              </div>
+                            </div> 
+                        </md-input-container>
+                        <md-input-container>
+                            <label for="cip" translate>CLIENT.CIP.LABEL</label>
+                            <input id="cip" label="cip" name="cip" type="text" ng-model="vm.user.cip" required/>
+                            <div ng-messages="client.cip.$error" ng-if="client.$submitted && client.cip.$invalid">
+                                <div ng-message when="required">
+                                <span translate>CLIENT.CIP.PLEASE_ENTER</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container>
+                            <label for="checkDigitC" translate>CLIENT.CHECK_DIGIT</label>
+                            <input id="checkDigitC" label="checkDigitC" name="checkDigitC" type="text" ng-model="vm.user.checkDigitC" required/> 
+                        </md-input-container>
+                       
+                        <md-input-container> 
+                              <label translate>CLIENT.PREFERENCE_OFFICE.LABEL</label>
+                              <md-select name="preofficeC" ng-model="vm.user.preofficeC" required>
+                                <md-option value="1">Perejil</md-option>
+                                <md-option value="2">Villa Lucre</md-option>
+                                <md-option value="3">Chorrera</md-option>
+                              </md-select>
+                              <div ng-messages="client.preofficeC.$error" ng-if="client.$submitted && client.preofficeC.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>CLIENT.PREFERENCE_OFFICE.PLEASE_ENTER</span>
+                                </div>
+                              </div> 
+                        </md-input-container>
+                         <md-input-container>
+                            <label for="checkCodeC" translate>CLIENT.CHECK_CODE</label>
+                            <input id="checkCodeC" label="checkCodeC" name="checkCodeC" type="number" ng-model="vm.user.checkCodeC" required/> 
+                        </md-input-container>
+                        <md-button class="md-raised md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10"  translate="CLIENT.NEXT_LINK" aria-label="{{'CLIENT.NEXT_LINK' | translate}}"></md-button>
+                      </form> 
+                      </div>
+                      <div ng-if="data.typeaccount==2">
+                      <form name="commerce" ng-submit="commerce.$valid && vm.commerceClick()" novalidate>
+                        <md-input-container>
+                          <label for="ruc" translate>COMMERCE.RUC.LABEL</label>
+                          <input id="ruc" label="ruc" name="ruc" type="text" ng-model="vm.user.ruc" required/>
+                          <div ng-messages="commerce.ruc.$error" ng-if="commerce.$submitted && commerce.ruc.$invalid">
+                            <div ng-message when="required">
+                                <span translate>COMMERCE.RUC.PLEASE_ENTER</span>
+                            </div>
+                          </div> 
+                        </md-input-container>
+                        <md-input-container>
+                          <label for="checkDigit" translate>COMMERCE.CHECK_DIGIT.LABEL</label>
+                              <input id="checkDigit" label="checkDigit" name="checkDigit" type="text" ng-model="vm.user.checkDigit" required/>
+                               <div ng-messages="commerce.checkDigit.$error" ng-if="commerce.$submitted && commerce.checkDigit.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>COMMERCE.CHECK_DIGIT.PLEASE_ENTER</span>
+                                  </div>
+                              </div> 
+                        </md-input-container>
+                        <md-input-container>
+                          <label for="businessname" translate>COMMERCE.BUSINESS_NAME.LABEL</label>
+                            <input id="businessname" label="businessname" name="businessname" type="text" ng-model="vm.user.businessname" required/>
+                             <div ng-messages="commerce.businessname.$error" ng-if="commerce.$submitted && commerce.businessname.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>COMMERCE.BUSINESS_NAME.PLEASE_ENTER</span>
+                                </div>
+                            </div>  
+                       </md-input-container>
+                       <md-input-container>
+                          <label for="tradename" translate>COMMERCE.TRADENAME </label>
+                            <input id="tradename" label="tradename" name="tradename" type="text" ng-model="vm.user.tradename" required/> 
+                       </md-input-container>
+                       <md-input-container>
+                            <label translate>COMMERCE.PREFERENCE_OFFICE.LABEL</label>
+                            <md-select name="preoffice" ng-model="vm.user.preoffice" required>
+                                   <md-option value="1">Perejil</md-option>
+                                <md-option value="2">Villa Lucre</md-option>
+                                <md-option value="3">Chorrera</md-option>
+                            </md-select>
+                             <div ng-messages="commerce.preoffice.$error" ng-if="commerce.$submitted && commerce.preoffice.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>COMMERCE.PREFERENCE_OFFICE.PLEASE_ENTER</span>
+                                </div>
+                            </div> 
+                       </md-input-container>
+                        <md-input-container>
+                            <label for="checkCode" translate>COMMERCE.CHECK_CODE</label>
+                            <input id="checkCode" label="checkCode" name="checkCode" type="number" ng-model="vm.user.checkCode" required/> 
+                        </md-input-container>
+                        <md-button class="md-raised md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10"  translate="COMMERCE.NEXT_LINK" aria-label="{{'COMMERCE.NEXT_LINK' | translate}}"></md-button>
+                      </form> 
+                      </div>
+            </md-content>
+
+        </md-card>
+    </div>
+</div>

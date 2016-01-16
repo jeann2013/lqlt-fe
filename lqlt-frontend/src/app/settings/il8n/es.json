@@ -1,0 +1,63 @@
+{
+    "MENU": {
+        "SETTING": "Configuraciones"
+    },
+    "SETTINGS": {
+        "TITLE": "Configuracion",
+        "LIST": {
+            "TITLE": "Tiene limites de credito",
+            "ADMINISTRATORS": "Administradores", 
+            "PERMITS": "Permisos", 
+            "PROFILES": "Perfiles", 
+            "BRANCHES": "Sucursales",
+            "LOCKERS": "Lockers", 
+            "BLOCKEDSITES": "Sitios Bloqueados", 
+            "ADDRESSES": "Direciones", 
+            "AUDIT": "Auditoria", 
+            "CATEGORIES": "Categorias", 
+            "BANKACCOUNTS": "Cuentas Bancarias", 
+            "CREDITCARDS": "Tarjetas de Credito", 
+            "BLACKLISTSELLERS": "Vendedores en BlackList", 
+            "PAYMENTMETHOD": "Metodo de Pago", 
+            "PAYMENTPARTNERS": "Aliados de Pago", 
+            "CARDBINS": "Bines de Tarjetas", 
+            "PROMOTIONS": "Promociones", 
+            "RECURRINGPLANS": "Planes Recurrentes", 
+            "NOTIFICATIONSINTERVAL": "Intervalo Notificaciones", 
+            "FORMULAS": "Formulas", 
+            "PROCEDURESHANDLING": "Tramites y Manejos",
+            "DELIVERYAREAS": "Areas de Entrega"
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

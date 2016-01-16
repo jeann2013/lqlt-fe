@@ -1,0 +1,35 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editorderstatus" ng-submit="editorderstatus.$valid && vm.editorderstatusClick()" novalidate>
+            <span class="md-headline" translate>EDIT_ORDERSTATUS.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                      <label for="name" translate>EDIT_ORDERSTATUS.NAME.LABEL</label>
+                      <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                        <div ng-messages="editorderstatus.name.$error" ng-if="editorderstatus.$submitted && editorderstatus.name.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_ORDERSTATUS.NAME.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+              </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_ORDERSTATUS.BUTTON_CANCEL"  aria-label="{{'EDIT_ORDERSTATUS.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_ORDERSTATUS.BUTTON_SIGNUP" aria-label="{{'EDIT_ORDERSTATUS.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

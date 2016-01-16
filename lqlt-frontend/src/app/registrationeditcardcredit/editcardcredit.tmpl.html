@@ -1,0 +1,121 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editcardcredit" ng-submit="editcardcredit.$valid && vm.editcardcreditClick()" novalidate>
+            <span class="md-headline" translate>EDIT_CARDCREDIT.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                      <label for="bank" translate>EDIT_CARDCREDIT.BANK.LABEL</label>
+                      <input id="bank" name="bank" type="text" ng-model="vm.user.bank" required/>
+                        <div ng-messages="editcardcredit.bank.$error" ng-if="editcardcredit.$submitted && editcardcredit.bank.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CARDCREDIT.BANK.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="card" translate>EDIT_CARDCREDIT.CARDNUMBER.LABEL</label>
+                      <input id="card" name="card" type="text" ng-model="vm.user.card" required/>
+                        <div ng-messages="editcardcredit.card.$error" ng-if="editcardcredit.$submitted && editcardcredit.card.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CARDCREDIT.CARDNUMBER.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_CARDCREDIT.TYPE.LABEL</label>
+                    <md-select name="type" ng-model="vm.user.type" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editcardcredit.type.$error" ng-if="editcardcredit.$submitted && editcardcredit.type.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CARDCREDIT.TYPE.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                   <md-input-container flex>
+                      <label for="expiration" translate>EDIT_CARDCREDIT.EXPIRATION.LABEL</label>
+                      <input id="expiration" name="expiration" type="text" ng-model="vm.user.expiration" required/>
+                        <div ng-messages="editcardcredit.expiration.$error" ng-if="editcardcredit.$submitted && editcardcredit.expiration.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CARDCREDIT.EXPIRATION.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+
+                <div flex><hr></div>
+                <span  translate>EDIT_CARDCREDIT.PAYMENTMETHOD.TITLE</span>
+                      
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment1" id="payment1">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL1</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment5" id="payment5">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL5</span>
+                        </md-checkbox>
+                  </div>
+                  
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment2" id="payment2">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL2</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment6" id="payment6">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL6</span>
+                        </md-checkbox>
+                  </div>
+                  
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment3" id="payment3">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL3</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment7" id="payment7">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL7</span>
+                        </md-checkbox>
+                  </div>
+                   
+                </div>
+                <div layout="row" layout-wrap >
+                  <div flex>
+                     <md-checkbox ng-model="vm.user.payment4" id="payment4">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL4</span>
+                      </md-checkbox>
+                  </div>
+                  <div flex>
+                      <md-checkbox ng-model="vm.user.payment8" id="payment8">
+                              <span class="md-info" translate>EDIT_CARDCREDIT.PAYMENTMETHOD.LABEL8</span>
+                        </md-checkbox>
+                  </div>
+                   
+                </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_CARDCREDIT.BUTTON_CANCEL"  aria-label="{{'EDIT_CARDCREDIT.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_CARDCREDIT.BUTTON_SIGNUP" aria-label="{{'EDIT_CARDCREDIT.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

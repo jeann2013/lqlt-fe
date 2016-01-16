@@ -1,0 +1,34 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="formalities" ng-submit="formalities.$valid && vm.formalitiesClick()" novalidate>
+            <span class="md-headline" translate>EDIT_FORMALITIES.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row">
+                <md-input-container flex>
+                      <label for="formal" translate>EDIT_FORMALITIES.FORMALITIES.LABEL</label>
+                      <input id="formal" name="formal" type="text" ng-model="vm.user.formal" required/>
+                        <div ng-messages="formalities.formal.$error" ng-if="formalities.$submitted && formalities.formal.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_FORMALITIES.FORMALITIES.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_FORMALITIES.BUTTON_CANCEL"  aria-label="{{'EDIT_FORMALITIES.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_FORMALITIES.BUTTON_SIGNUP" aria-label="{{'EDIT_FORMALITIES.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

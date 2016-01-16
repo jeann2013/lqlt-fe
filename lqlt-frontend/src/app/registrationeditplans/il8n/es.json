@@ -1,0 +1,27 @@
+{
+    "MENU": {
+        "EDITPLANS": "Registro Planes"
+    },
+    "EDIT_PLANS": {
+        "TITLE": "Registro de Planes Recurrente",
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "AMOUNT": {
+            "LABEL": "Monto",
+            "PLEASE_ENTER": "Por favor ingrese su monto"
+        },
+        "DAYCOURT": {
+            "LABEL": "Dia de corte",
+            "PLEASE_ENTER": "Por favor ingrese su dia de corte"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+

@@ -1,0 +1,26 @@
+{
+    "MENU": {
+        "EDITBINS": "Registro de Bines"
+    },
+    "EDIT_BINS": {
+        "TITLE": "Registro de Bine",
+        "NAME": {
+            "LABEL": "Bine",
+            "PLEASE_ENTER": "Por favor ingrese el bine"
+        },
+        "ALLYPAYMENT": {
+            "LABEL": "Aliado de pago",
+            "PLEASE_ENTER": "Por favor ingrese el aliado de pago"
+        },
+        "TYPESERVICE": {
+            "LABEL": "Tipo de servicio",
+            "PLEASE_ENTER": "Por favor ingrese el tipo de servicio"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

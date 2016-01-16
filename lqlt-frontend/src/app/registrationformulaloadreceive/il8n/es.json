@@ -1,0 +1,97 @@
+{
+    "MENU": {
+        "FORMULALOADRECEIVE": "Registro de Formula Carga Recibe"
+    },
+    "FORMULA_LOADRECEIVE": {
+        "TITLE": "Registro de Formula para Servicio de Carga Recibe Por ti",
+        "DESCRIPTION": {
+            "LABEL": "Descripcion",
+            "PLEASE_ENTER": "Por favor ingrese su descripcion"
+        },
+        "AIR_TRANSPORT": "Para el Transporte Aereo",
+        "AIR_MINIMUMCOST": {
+            "LABEL":"Flete Fijo Minimo",
+            "PLEASE_ENTER": "Por favor ingrese su Costo flete fijo minimo"
+        },
+        "AIR_PROCESSED": {
+            "LABEL":"Tramite",
+            "PLEASE_ENTER": "Por favor ingrese su Tramite y Manejo"
+        },
+        "AIR_STORAGE": {
+            "LABEL":"Almacenaje",
+            "PLEASE_ENTER": "Por favor ingrese su Almacenaje"
+        },
+        "AIR_INSURANCE": {
+            "LABEL":"Seguro",
+            "PLEASE_ENTER": "Por favor ingrese su Seguro"
+        },
+        "AIR_ITBMS": {
+            "LABEL":"ITBMS",
+            "PLEASE_ENTER": "Por favor ingrese su ITBMS"
+        },
+        "AIR_PRICERANGE": "Rango de Libras por Precio",
+        "MARINE_TRANSPORT": "Para el Transporte Maritimo",
+        "MARINE_MINIMUMCOST": {
+            "LABEL":"Flete Fijo Minimo",
+            "PLEASE_ENTER": "Por favor ingrese su Costo flete fijo minimo"
+        },
+        "MARINE_PROCESSED": {
+            "LABEL":"Tramite",
+            "PLEASE_ENTER": "Por favor ingrese su Tramite y Manejo"
+        },
+        "MARINE_STORAGE": {
+            "LABEL":"Almacenaje",
+            "PLEASE_ENTER": "Por favor ingrese su Almacenaje"
+        },
+        "MARINE_INSURANCE": {
+            "LABEL":"Seguro",
+            "PLEASE_ENTER": "Por favor ingrese su Seguro"
+        },
+        "MARINE_ITBMS": {
+            "LABEL":"ITBMS",
+            "PLEASE_ENTER": "Por favor ingrese su ITBMS"
+        },
+        "MARINE_MINPOUNDS": {
+                    "LABEL":"Lbs mínimas permitidas",
+                    "PLEASE_ENTER": "Por favor ingrese su Lbs mínimas permitidas"
+        },
+        "MARINE_LIQUIDATION": {
+                    "LABEL":"Liquidación",
+                    "PLEASE_ENTER": "Por favor ingrese su liquidación"
+        },
+        "MARINE_PRICERANGE": "Rango de Libras por Precio",
+        "TEST": "Prueba",
+        "REAL": {
+            "LABEL":"Lbs Reales",
+            "PLEASE_ENTER": "Por favor ingrese su Lbs Reales"
+        },
+        "VOLUME": {
+            "LABEL":"Lbs volumen",
+            "PLEASE_ENTER": "Por favor ingrese su Lbs volumen"
+        },
+        "TRANSPORTTYPE": {
+            "LABEL":"Tipo de Transporte",
+            "PLEASE_ENTER": "Por favor ingrese su Tipo de Transporte"
+        },
+        "TO_APPLY_CALCULATION": "desea aplicar calculo de manejo de carga?",
+        "CALCULATION": {
+            "TITLE": "Calculo de Prueba",
+            "COST":"Flete",
+            "PROCESSED":"Tramite",
+            "STORAGE":"Almacenaje",
+            "INSURANCE":"Seguro",
+            "ITBMS":"ITBMS",
+            "TOTAL":"Total"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+
+    }
+}
+
+
+
+
+
+
+

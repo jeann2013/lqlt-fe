@@ -1,0 +1,135 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+        <form name="editadministrators" ng-submit="editadministrators.$valid && vm.editadministratorsClick()" novalidate>
+          <span class="md-headline" translate>EDIT_ADMINISTRATOR.TITLE</span>
+          <hr>
+            <div layout="column"> 
+              <div layout="row">
+                <md-input-container flex>
+                  <label for="firstName" translate>EDIT_ADMINISTRATOR.FIRSTNAME.LABEL</label>
+                  <input id="firstName" name="firstName" type="text" ng-model="vm.user.firstName" required/>
+                      <div ng-messages="editadministrators.firstName.$error" ng-if="editadministrators.$submitted && editadministrators.firstName.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_ADMINISTRATOR.FIRSTNAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="lastName" translate>EDIT_ADMINISTRATOR.LASTNAME.LABEL</label> 
+                  <input id="lastName" name="lastName" type="text"  ng-model="vm.user.lastName"required/>
+                      <div ng-messages="editadministrators.lastName.$error" ng-if="editadministrators.$submitted && editadministrators.lastName.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_ADMINISTRATOR.LASTNAME.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container >
+                <div layout="column" flex layout-align="center center">
+                  <md-datepicker name="birtdate" ng-model="vm.birtdate" md-placeholder="{{'EDIT_ADMINISTRATOR.BIRTDATE.LABEL' | translate}}" required></md-datepicker>
+                  <div ng-messages="editadministrators.birtdate.$error" ng-if="editadministrators.$submitted && editadministrators.birtdate.$invalid">
+                          <div ng-message when="required">
+                              <span class="outter-error-box" translate>EDIT_ADMINISTRATOR.BIRTDATE.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </div> 
+              </div>
+              <div layout="row">
+                <md-input-container flex>
+                  <label translate>EDIT_ADMINISTRATOR.SEXO.LABEL</label>
+                  <md-select name="sexo" ng-model="vm.user.sexo" required>
+                  <md-option value="1">MASCULINO</md-option>
+                  <md-option value="2">FEMENINO</md-option>
+                  </md-select>
+                    <div ng-messages="editadministrators.sexo.$error" ng-if="editadministrators.$submitted && editadministrators.sexo.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_ADMINISTRATOR.SEXO.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label for="ident" translate>EDIT_ADMINISTRATOR.IDENTIFICATION.LABEL</label> 
+                    <input id="ident" name="ident" type="text"  ng-model="vm.user.ident"required/>
+                      <div ng-messages="editadministrators.ident.$error" ng-if="editadministrators.$submitted && editadministrators.ident.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_ADMINISTRATOR.IDENTIFICATION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label for="idenType" translate>EDIT_ADMINISTRATOR.IDENTIFICATION_TYPE.LABEL</label>
+                    <md-select name="idenType" ng-model="vm.user.idenType" required>
+                    <md-option value="1">Cedula</md-option>
+                    </md-select>
+                     <div ng-messages="editadministrators.idenType.$error" ng-if="editadministrators.$submitted && editadministrators.idenType.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_ADMINISTRATOR.IDENTIFICATION_TYPE.PLEASE_ENTER</span>
+                          </div>
+                      </div> 
+                </md-input-container>
+              </div>
+              <div layout="row">
+                <md-input-container flex>
+                  <label translate>EDIT_ADMINISTRATOR.PERMISSION.LABEL</label>
+                  <md-select name="permission" ng-model="vm.user.permission" required>
+                  <md-option value="1">Valor1</md-option>
+                  </md-select>
+                   <div ng-messages="editadministrators.permission.$error" ng-if="editadministrators.$submitted && editadministrators.permission.$invalid">
+                          <div ng-message when="required">
+                              <span translate>EDIT_ADMINISTRATOR.PERMISSION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </md-input-container>
+                 <md-input-container flex>
+                  <label for="email" translate>EDIT_ADMINISTRATOR.EMAIL.LABEL</label>
+                  <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
+                  <div ng-messages="editadministrators.email.$error" ng-if="editadministrators.$submitted && editadministrators.email.$invalid">
+                    <div ng-message when="required">
+                      <span translate>EDIT_ADMINISTRATOR.EMAIL.PLEASE_ENTER</span>
+                    </div>
+                    <div ng-message when="email">
+                      <span translate>EDIT_ADMINISTRATOR.EMAIL.PLEASE_VALID</span>
+                    </div>
+                  </div>
+                </md-input-container> 
+                <div layout="column" flex layout-align="center center">
+                  <md-datepicker name="entrancedate" ng-model="vm.entrancedate" md-placeholder="{{'EDIT_ADMINISTRATOR.ENTRANCEDATE.LABEL' | translate}}" required></md-datepicker>
+                  <div ng-messages="editadministrators.entrancedate.$error" ng-if="editadministrators.$submitted && editadministrators.entrancedate.$invalid">
+                          <div ng-message when="required">
+                              <span class="outter-error-box" translate>EDIT_ADMINISTRATOR.ENTRANCEDATE.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                </div> 
+              </div>
+              <div layout="row"> 
+                <md-input-container flex>
+                  <label for="password" translate>EDIT_ADMINISTRATOR.PASSWORD.LABEL</label>
+                  <input id="password" label="password" name="password" type="password" ng-model="vm.user.password" tri-same-password="editadministrators.confirm" ng-minlength="8" required/>
+                  <ng-messages for="editadministrators.password.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="editadministrators.$submitted && editadministrators.password.$invalid">
+                  </ng-messages>
+                </md-input-container>
+                <md-input-container flex>
+                  <label for="password" translate>EDIT_ADMINISTRATOR.PASSWORD_CONFIRM.LABEL</label>
+                  <input id="confirmPassword" label="confirmPassword" name="confirmPassword" type="password" ng-model="vm.user.confirmPassword" tri-same-password="editadministrators.password" ng-minlength="8" required/>
+                  <ng-messages for="editadministrators.confirmPassword.$error" ng-include="'app/authentication/signup/password.messages.html'" ng-if="editadministrators.$submitted && editadministrators.password.$valid && editadministrators.confirmPassword.$invalid">
+                  </ng-messages>
+                </md-input-container>
+              </div> 
+               <md-checkbox ng-model="vm.user.changePassLogin" id="changePassLogin">
+                        <span class="md-info" translate>EDIT_ADMINISTRATOR.CHANGEPASSLOGIN</span>
+                    </md-checkbox>
+              <div layout="row" layout-align="center center">
+             
+              <md-button  class="md-raised md-warn " translate="EDIT_ADMINISTRATOR.BUTTON_CANCEL"  aria-label="{{'EDIT_ADMINISTRATOR.BUTTON_CANCEL' | translate}}"></md-button>
+              
+             
+              <md-button class="md-raised md-primary"  translate="EDIT_ADMINISTRATOR.BUTTON_SIGNUP" aria-label="{{'EDIT_ADMINISTRATOR.BUTTON_SIGNUP' | translate}}"></md-button>
+              </div>
+            </div>     
+        </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

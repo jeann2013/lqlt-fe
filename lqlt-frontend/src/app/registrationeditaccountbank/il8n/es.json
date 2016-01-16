@@ -1,0 +1,38 @@
+{
+    "MENU": {
+        "EDITACCOUNTBANK": "Registrar Cuenta Bancaria"
+    },
+    "EDIT_ACCOUNTBANK": {
+        "TITLE": "Registro de Cuenta Bancaria",
+        "BANK": {
+            "LABEL": "Banco",
+            "PLEASE_ENTER": "Por favor ingrese el banco"
+        },
+        "ACCOUNTNUMBER": {
+            "LABEL": "No. Cuenta",
+            "PLEASE_ENTER": "Por favor ingrese el No. cuenta"
+        },
+        "TYPE": {
+            "LABEL": "Tipo",
+            "PLEASE_ENTER": "Por favor ingrese el tipo"
+        },
+        "CHK_CLIENT": "Mostrar al cliente",
+        "PAYMENTMETHOD": {
+            "TITLE": "Metodos de pagos",
+            "LABEL1": "Metodos de Pagos registrados",
+            "LABEL2": "Metodos de Pagos registrados 2",
+            "LABEL3": "Metodos de Pagos registrados 3",
+            "LABEL4": "Metodos de Pagos registrados 4",
+            "LABEL5": "Metodos de Pagos registrados 5",
+            "LABEL6": "Metodos de Pagos registrados 6",
+            "LABEL7": "Metodos de Pagos registrados 7",
+            "LABEL8": "Metodos de Pagos registrados 8"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

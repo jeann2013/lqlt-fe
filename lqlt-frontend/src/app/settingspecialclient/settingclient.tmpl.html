@@ -1,0 +1,119 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="settingclient" ng-submit="settingclient.$valid && vm.settingclientClick()" novalidate>
+            <span class="md-headline" translate>SETTING_CLIENT.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <md-checkbox ng-model="vm.user.chkLimit" id="chkLimit">
+                <span class="md-info" translate>SETTING_CLIENT.CHK_LIMIT</span>
+                </md-checkbox>
+                  <span class="whiteframe-title" translate>SETTING_CLIENT.LIMIT.TITLE</span> 
+                    <md-whiteframe flex class="md-whiteframe-z1 margin-bottom-20">
+                      <div layout="row" class="whiteframe">
+                          <md-input-container flex>
+                            <label for="limitCredit" translate>SETTING_CLIENT.LIMIT.LABEL_CREDIT</label>
+                            <input id="limitCredit" name="limitCredit" type="text" ng-model="vm.user.limitCredit" required/>
+                              <div ng-messages="settingclient.limitCredit.$error" ng-if="settingclient.$submitted && settingclient.limitCredit.$invalid">
+                                <div ng-message when="required">
+                                <span translate>SETTING_CLIENT.LIMIT.PLEASE_CREDIT</span>
+                                </div>
+                              </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="limitVige" translate>SETTING_CLIENT.LIMIT.LABEL_VIGEN</label> 
+                            <input id="limitVige" name="limitVige" type="number" min="0"  ng-model="vm.user.limitVige"required/>
+                              <div ng-messages="settingclient.limitVige.$error" ng-if="settingclient.$submitted && settingclient.limitVige.$invalid">
+                                <div ng-message when="required">
+                                <span translate>SETTING_CLIENT.LIMIT.PLEASE_VIGEN</span>
+                                </div>
+                              </div>
+                          </md-input-container > 
+                      </div>
+                    </md-whiteframe>  
+                <md-checkbox ng-model="vm.user.chkAbono" id="chkAbono">
+                <span class="md-info" translate>SETTING_CLIENT.CHK_ABONO</span>
+                </md-checkbox>
+                  <span class="whiteframe-title" translate>SETTING_CLIENT.ABONO.TITLE</span> 
+                    <md-whiteframe flex class="md-whiteframe-z1 margin-bottom-20">
+                      <div layout="row" class="whiteframe">
+                          <md-input-container flex>
+                            <label for="abonoFijo" translate>SETTING_CLIENT.ABONO.LABEL</label>
+                            <input id="abonoFijo" name="abonoFijo" type="text" ng-model="vm.user.abonoFijo" required/>
+                              <div ng-messages="settingclient.abonoFijo.$error" ng-if="settingclient.$submitted && settingclient.abonoFijo.$invalid">
+                                <div ng-message when="required">
+                                <span translate>SETTING_CLIENT.ABONO.PLEASE</span>
+                                </div>
+                              </div>
+                          </md-input-container>
+                         
+                      </div>
+                    </md-whiteframe> 
+                <md-checkbox ng-model="vm.user.chkAccount" id="chkAccount">
+                <span class="md-info" translate>SETTING_CLIENT.CHK_ACCOUNT</span>
+                </md-checkbox>
+                  <span translate class="whiteframe-title" >SETTING_CLIENT.ACCOUNT.TITLE</span> 
+                    <md-whiteframe flex class="md-whiteframe-z1 margin-bottom-20">
+                      <div layout="row" class="whiteframe">
+                           <md-input-container flex>
+                            <label translate>SETTING_CLIENT.ACCOUNT.LABEL</label>
+                            <md-select name="plan" ng-model="vm.user.plan" required>
+                            </md-select>
+                            <div ng-messages="settingclient.plan.$error" ng-if="settingclient.$submitted && settingclient.plan.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>SETTING_CLIENT.ACCOUNT.PLEASE</span>
+                                  </div>
+                              </div>
+                          </md-input-container>
+                      </div>
+                      <hr>
+                       <span class="whiteframe-title" translate>SETTING_CLIENT.INFORMATION</span>
+                       <div layout="row" class="whiteframe"> 
+                         <md-input-container flex>
+                          <label for="numberDebit" translate>SETTING_CLIENT.NUMBER_DEBIT.LABEL</label>
+                          <input id="numberDebit" name="numberDebit" type="text" ng-model="vm.user.numberDebit" required/>
+                              <div ng-messages="settingclient.numberDebit.$error" ng-if="settingclient.$submitted && settingclient.numberDebit.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>SETTING_CLIENT.NUMBER_DEBIT.PLEASE</span>
+                                  </div>
+                              </div>
+                        </md-input-container>
+                        <md-input-container flex>
+                          <label for="email" translate>SETTING_CLIENT.EMAIL.LABEL</label>
+                          <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
+                          <div ng-messages="settingclient.email.$error" ng-if="settingclient.$submitted && settingclient.email.$invalid">
+                            <div ng-message when="required">
+                              <span translate>SETTING_CLIENT.EMAIL.PLEASE_ENTER</span>
+                            </div>
+                            <div ng-message when="email">
+                              <span translate>SETTING_CLIENT.EMAIL.PLEASE_VALID</span>
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <div layout="column" flex layout-align="center center">
+                          <md-datepicker id="expirationDate" name="expirationDate" ng-model="vm.expirationDate" md-placeholder="{{'SETTING_CLIENT.EXPIRATION_DATE.LABEL' | translate}}" required >
+                          </md-datepicker>
+                          <div ng-messages="settingclient.expirationDate.$error" ng-if="settingclient.$submitted && settingclient.expirationDate.$invalid">
+                                  <div ng-message when="required">
+                                      <span class="message" translate>SETTING_CLIENT.EXPIRATION_DATE.PLEASE</span>
+                                  </div>
+                              </div>
+                        </div> 
+                      </div> 
+                    </md-whiteframe> 
+                <div layout="row">
+                </div>
+                <div layout="row" layout-align="center center">
+
+                <md-button  class="md-raised md-warn " translate="SETTING_CLIENT.BUTTON_CANCEL"  aria-label="{{'SETTING_CLIENT.BUTTON_CANCEL' | translate}}"></md-button>
+
+
+                <md-button class="md-raised md-primary"  translate="SETTING_CLIENT.BUTTON_SIGNUP" aria-label="{{'SETTING_CLIENT.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>

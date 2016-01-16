@@ -1,0 +1,22 @@
+{
+    "MENU": {
+        "EDITVENDORS": "Registro Vendedores"
+    },
+    "EDIT_VENDORS": {
+        "TITLE": "Registro de Vendedores en",
+        "NAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese el nombre"
+        },
+        "WEBSITE": {
+            "LABEL": "SitioWeb",
+            "PLEASE_ENTER": "Por favor ingrese el sitioweb"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

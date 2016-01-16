@@ -1,0 +1,59 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+    <md-content class="md-padding">
+      <md-card class="padded-content-page ng-scope">
+        <div ng-controller="ClientCommerceController as vm">
+            <span class="md-headline" translate>CLIENT_COMMERCE.TITLE</span>
+            <hr>
+                    <md-data-table-toolbar ng-hide="vm.selected.length || vm.filter.show">
+                        <div flex>     
+                            <md-button  class="md-primary" href="#" translate="CLIENT_COMMERCE.CLIENT_LINK" ></md-button>
+                            <md-button  class="md-primary" href="#" translate="CLIENT_COMMERCE.COMMERCE_LINK" ></md-button>
+                        </div>
+                        <md-button class="md-icon-button" ng-click="vm.filter.show = true">
+                            <!-- <i class="material-icons md-dark">filter_list</i> -->
+                            <md-icon  class="font-size-3 zmdi zmdi-search material-icons"></md-icon>
+                        </md-button>
+                    </md-data-table-toolbar>
+                    <md-data-table-toolbar ng-show="vm.filter.show && !vm.selected.length" class="md-data-table-toolbar">
+                        <form flex="" name="vm.filter.form">
+                            <input type="text" ng-model="vm.query.filter" ng-model-options="vm.filter.options" placeholder="{{'CLIENT_COMMERCE.SEARCH' | translate}}">
+                        </form>
+                        <md-button class="md-icon-button" ng-click="vm.removeFilter()">
+                            <md-icon md-font-icon="zmdi zmdi-close"></md-icon>
+                        </md-button>
+                    </md-data-table-toolbar>
+                    <md-data-table-toolbar class="alternate" ng-show="vm.selected.length" layout-align="space-between">
+                      <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
+                    </md-data-table-toolbar>
+                    <md-data-table-container>
+                        <table md-data-table class="md-primary md-data-table" md-progress="vm.deferred">
+                            <thead md-order="vm.query.order" md-trigger="vm.onorderchange">
+                                <tr>
+                                    <th name="Cod Cliente"></th>
+                                    <th name="Nombre"></th>
+                                    <th name="Email"></th>
+                                    <th name="Tipo"></th>
+                                    <th name="Estado"></th>
+                                    <th name="Acciones"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr md-auto-select ng-repeat="user in vm.users.data | orderBy: vm.query.order | limitTo: vm.query.limit: (vm.query.page - 1) * vm.query.limit | filter:vm.query.filter">
+                                    <td>{{user.codclient}}</td>
+                                    <td>{{user.name}}</td>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.type}}</td>
+                                    <td>{{user.state}}</td>
+                                    <td>{{user.actions}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </md-data-table-container>
+                    <md-data-table-pagination md-limit="vm.query.limit" md-page="vm.query.page" md-total="{{vm.users.total_count}}" md-trigger="vm.onpagechange">
+                    </md-data-table-pagination>
+        </div>
+      </md-card>
+    </md-content>
+  </div>
+</div>

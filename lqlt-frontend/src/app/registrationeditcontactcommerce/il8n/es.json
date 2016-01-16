@@ -1,0 +1,35 @@
+{
+    "MENU": {
+        "EDITCONTACTCOMMERCE": "Registro edic. Contacto Comercio"
+    },
+    "EDIT_CONTACTCOMMERCE": {
+        "TITLE": "Registro de Contacto",
+        "FIRSTNAME": {
+            "LABEL": "Nombre",
+            "PLEASE_ENTER": "Por favor ingrese su nombre"
+        },
+        "LASTNAME": {
+            "LABEL": "Apellido",
+            "PLEASE_ENTER": "Por favor ingrese su apellido"
+        },
+        "ADDRESS": {
+            "LABEL": "Direccion",
+            "PLEASE_ENTER": "Por favor ingrese la direccion"
+        },
+        "DEPARTMENT": {
+            "LABEL": "Departamento",
+            "PLEASE_ENTER": "Por favor ingrese el departamento"
+        },
+        "PHONE":"Telefono",
+        "CELLPHONE": {
+            "LABEL": "Celular",
+            "PLEASE_ENTER": "Por favor ingrese su numero de celular"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

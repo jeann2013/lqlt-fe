@@ -1,0 +1,91 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="70" flex-md="70" flex-sm="70">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+          <form name="editcategories" ng-submit="editcategories.$valid && vm.editcategoriesClick()" novalidate>
+            <span class="md-headline" translate>EDIT_CATEGORIES.TITLE</span>
+             <hr> 
+              <div layout="column" > 
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                    <label translate>EDIT_CATEGORIES.CATEGORY.LABEL</label>
+                    <md-select name="category" ng-model="vm.user.category" required>
+                    <md-option value="1">Valor1</md-option>
+                    </md-select>
+                       <div ng-messages="editcategories.category.$error" ng-if="editcategories.$submitted && editcategories.category.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CATEGORIES.CATEGORY.PLEASE_ENTER</span>
+                            </div>
+                        </div>                     
+                  </md-input-container>
+                    <md-input-container flex>
+                        <label for="name" translate>EDIT_CATEGORIES.NAME.LABEL</label>
+                        <input id="name" name="name" type="text" ng-model="vm.user.name" required/>
+                          <div ng-messages="editcategories.name.$error" ng-if="editcategories.$submitted && editcategories.name.$invalid">
+                              <div ng-message when="required">
+                                  <span translate>EDIT_CATEGORIES.NAME.PLEASE_ENTER</span>
+                              </div>
+                          </div>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-wrap>
+                 <md-input-container flex>
+                      <label for="payment" translate>EDIT_CATEGORIES.PAYMENT.LABEL</label>
+                      <input id="payment" name="payment" type="text" ng-model="vm.user.payment" required/>
+                        <div ng-messages="editcategories.payment.$error" ng-if="editcategories.$submitted && editcategories.payment.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CATEGORIES.PAYMENT.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <div flex >
+                     <md-checkbox ng-model="vm.user.chkpayment" id="chkpayment">
+                              <span class="md-info" translate>EDIT_CATEGORIES.CHK_PAYMENT</span>
+                      </md-checkbox>
+                  </div>
+                </div>
+                <div layout="row" layout-wrap>
+                  <md-input-container flex>
+                      <label for="tariff" translate>EDIT_CATEGORIES.TARIFF.LABEL</label>
+                      <input id="tariff" name="tariff" type="text" ng-model="vm.user.tariff" required/>
+                        <div ng-messages="editcategories.tariff.$error" ng-if="editcategories.$submitted && editcategories.tariff.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CATEGORIES.TARIFF.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                  <md-input-container flex>
+                      <label for="isc" translate>EDIT_CATEGORIES.ISC.LABEL</label>
+                      <input id="isc" name="isc" type="text" ng-model="vm.user.isc" required/>
+                        <div ng-messages="editcategories.isc.$error" ng-if="editcategories.$submitted && editcategories.isc.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CATEGORIES.ISC.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                   <md-input-container flex>
+                      <label for="cif" translate>EDIT_CATEGORIES.CIF.LABEL</label>
+                      <input id="cif" name="cif" type="text" ng-model="vm.user.cif" required/>
+                        <div ng-messages="editcategories.cif.$error" ng-if="editcategories.$submitted && editcategories.cif.$invalid">
+                            <div ng-message when="required">
+                                <span translate>EDIT_CATEGORIES.CIF.PLEASE_ENTER</span>
+                            </div>
+                        </div>
+                  </md-input-container>
+                </div>
+              </div>
+                 <div layout="row" layout-align="center center">
+                 
+                  <md-button  class="md-raised md-warn " translate="EDIT_CATEGORIES.BUTTON_CANCEL"  aria-label="{{'EDIT_CATEGORIES.BUTTON_CANCEL' | translate}}"></md-button>
+                  
+                 
+                  <md-button class="md-raised md-primary"  translate="EDIT_CATEGORIES.BUTTON_SIGNUP" aria-label="{{'EDIT_CATEGORIES.BUTTON_SIGNUP' | translate}}"></md-button>
+                </div>
+              </div>
+          </form>
+        </md-card>
+      </md-content>
+  </div>
+</div>
+
+

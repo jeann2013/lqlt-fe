@@ -1,0 +1,46 @@
+{
+    "MENU": {
+        "AREADELIVERY": "Registrar area entrega "
+    },
+    "AREA_DELIVERY": {
+        "TITLE": "Registrar area de entrega",
+        "NAME": {
+            "LABEL": "Nombre del area",
+            "PLEASE_ENTER": "Por favor ingrese el nombre del area"
+        },
+        "PRICEPOUND": {
+            "LABEL": "Precio por libra",
+            "PLEASE_ENTER": "Por favor ingrese el precio por libra"
+        },
+        "PROVINCE": {
+            "LABEL": "Provincia",
+            "PLEASE_ENTER": "Por favor ingrese la provincia"
+        },
+        "DISTRICT": {
+            "LABEL": "Distrito",
+            "PLEASE_ENTER": "Por favor ingrese el distrito"
+        },
+        "CORREG": {
+            "TITLE": "Corregimiento",
+            "LABEL1": "Corregimiento 1",
+            "LABEL2": "Corregimiento 2",
+            "LABEL3": "Corregimiento 3",
+            "LABEL4": "Corregimiento 4",
+            "LABEL5": "Corregimiento 5",
+            "LABEL6": "Corregimiento 6",
+            "LABEL7": "Corregimiento 7",
+            "LABEL8": "Corregimiento 8",
+            "LABEL9": "Corregimiento 9",
+            "LABEL10": "Corregimiento 10",
+            "LABEL11": "Corregimiento 11",
+            "LABEL12": "Corregimiento 12",
+            "PLEASE_ENTER": "Por favor ingrese un corregimiento"
+        },
+        "BUTTON_CANCEL": "CANCELAR",
+        "BUTTON_SIGNUP": "REGISTRAR"
+   
+    }
+}
+
+
+

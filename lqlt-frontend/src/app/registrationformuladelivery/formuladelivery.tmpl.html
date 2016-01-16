@@ -1,0 +1,152 @@
+<div layout-padding layout="row" layout-fill layout-align="center center">
+  <div flex="100" flex-lg="100" flex-md="100" flex-sm="100">
+      <md-content class="md-padding">
+       <md-card class="padded-content-page ng-scope">
+         <md-card-content>
+          <form name="formuladelivery" ng-submit="formuladelivery.$valid && vm.formuladeliveryClick()" novalidate>
+            <span class="md-headline" translate>FORMULA_DELIVERY.TITLE</span>
+            <hr>
+              <div layout="column"> 
+                <div layout="row">
+                  <md-input-container flex>
+                    <label for="description" translate>FORMULA_DELIVERY.DESCRIPTION.LABEL</label>
+                    <input id="description" name="description" type="text" ng-model="vm.user.description" required/>
+                      <div ng-messages="formuladelivery.description.$error" ng-if="formuladelivery.$submitted && formuladelivery.description.$invalid">
+                          <div ng-message when="required">
+                              <span translate>FORMULA_DELIVERY.DESCRIPTION.PLEASE_ENTER</span>
+                          </div>
+                      </div>
+                  </md-input-container>
+                </div>
+                <div layout="row" layout-align="center center">
+                  <div  flex="50">
+                      <fieldset class="standard">
+                        <legend translate>FORMULA_DELIVERY.AIR_TRANSPORT</legend>
+                          <md-input-container flex>
+                            <label for="airShipping" translate>FORMULA_DELIVERY.AIR_SHIPPING.LABEL</label>
+                            <input id="airShipping" name="airShipping" type="text" ng-model="vm.user.airShipping" required/>
+                                <div ng-messages="formuladelivery.airShipping.$error" ng-if="formuladelivery.$submitted && formuladelivery.airShipping.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_DELIVERY.AIR_SHIPPING.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airITBMS" translate>FORMULA_DELIVERY.AIR_ITBMS.LABEL</label>
+                            <input id="airITBMS" name="airITBMS" type="text" ng-model="vm.user.airITBMS" required/>
+                                <div ng-messages="formuladelivery.airITBMS.$error" ng-if="formuladelivery.$submitted && formuladelivery.airITBMS.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_DELIVERY.AIR_ITBMS.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-input-container flex>
+                            <label for="airInsurance" translate>FORMULA_DELIVERY.AIR_INSURANCE.LABEL</label>
+                            <input id="airInsurance" name="airInsurance" type="text" ng-model="vm.user.airInsurance" required/>
+                                <div ng-messages="formuladelivery.airInsurance.$error" ng-if="formuladelivery.$submitted && formuladelivery.airInsurance.$invalid">
+                                    <div ng-message when="required">
+                                        <span translate>FORMULA_DELIVERY.AIR_INSURANCE.PLEASE_ENTER</span>
+                                    </div>
+                                </div>
+                          </md-input-container>
+                          <md-data-table-container flex>
+                          <br>
+                         <legend  translate>FORMULA_DELIVERY.AIR_PRICERANGE</legend>
+                            <table md-data-table class="md-primary md-data-table">
+                                <thead md-order="vm.query.order" >
+                                    <tr>
+                                        <th name="Libras Hasta"></th>
+                                        <th name="Precio"></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr md-auto-select ng-repeat="pricerange in vm.pricerange.data">
+                                    <td>{{pricerange.pounds}}</td>
+                                    <td>{{pricerange.price}}</td>
+                                   
+                                </tr>
+                                </tbody>
+                            </table>
+                          </md-data-table-container> 
+                      </fieldset>
+                  </div>
+
+                </div>
+                <div layout="row">
+                  <div  flex="100">
+                    <fieldset class="standard">
+                      <legend translate>FORMULA_DELIVERY.TEST</legend>
+                      <div layout="row"  layout-wrap>
+                        <md-input-container flex>
+                        <label for="real" translate>FORMULA_DELIVERY.REAL.LABEL</label>
+                        <input id="real" name="real" type="text" ng-model="vm.user.real" required/>
+                            <div ng-messages="formuladelivery.real.$error" ng-if="formuladelivery.$submitted && formuladelivery.real.$invalid">
+                                <div ng-message when="required">
+                                    <span translate>FORMULA_DELIVERY.REAL.PLEASE_ENTER</span>
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container flex>
+                          <label for="volumen" translate>FORMULA_DELIVERY.VOLUME.LABEL</label> 
+                          <input id="volumen" name="volumen" type="text"  ng-model="vm.user.volumen"required/>
+                              <div ng-messages="formuladelivery.volumen.$error" ng-if="formuladelivery.$submitted && formuladelivery.volumen.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_DELIVERY.VOLUME.PLEASE_ENTER</span>
+                                  </div>
+                              </div>
+                        </md-input-container > 
+                                  
+                      </div>
+                      <div layout="row"  layout-wrap>
+                        
+                        <md-input-container flex>
+                           <label for="regionType" translate>FORMULA_DELIVERY.REGIONTYPE.LABEL</label> 
+                          <md-select name="regionType" ng-model="vm.user.regionType" required>
+                          <md-option value="1">Valor1</md-option>
+                          </md-select>
+                             <div ng-messages="formuladelivery.regionType.$error" ng-if="formuladelivery.$submitted && formuladelivery.regionType.$invalid">
+                                  <div ng-message when="required">
+                                      <span translate>FORMULA_DELIVERY.REGIONTYPE.PLEASE_ENTER</span>
+                                  </div>
+                              </div>                     
+                        </md-input-container>          
+                      </div>
+                     
+                      <legend translate>FORMULA_DELIVERY.CALCULATION.TITLE</legend>
+                      <hr>
+                      <div layout="row"  layout-wrap>
+                        <div layout="column" layout-align="center end" flex="80">
+
+                          <label  translate>FORMULA_DELIVERY.CALCULATION.POUNDS</label> 
+                          <label  translate>FORMULA_DELIVERY.CALCULATION.PROCESSED</label> 
+                          <label  translate>FORMULA_DELIVERY.CALCULATION.ITBMS</label> 
+                          <label  translate>FORMULA_DELIVERY.CALCULATION.TOTAL</label> 
+                        </div>
+                         <div layout="column" class="vdivide" layout-align="center start" flex="8">
+                          <label>$0.00</label> 
+                          <label>$0.00</label>  
+                          <label>$0.00</label> 
+                          <label>$0.00</label> 
+                      
+                        </div>
+                      </div>
+                    </fieldset>
+                    </div>
+                </div>
+              <div layout="row" layout-align="center center">
+                   
+                    <md-button  class="md-raised md-warn " translate="FORMULA_DELIVERY.BUTTON_CANCEL"  aria-label="{{'FORMULA_DELIVERY.BUTTON_CANCEL' | translate}}"></md-button>
+                    
+                   
+                    <md-button class="md-raised md-primary"  translate="FORMULA_DELIVERY.BUTTON_SIGNUP" aria-label="{{'FORMULA_DELIVERY.BUTTON_SIGNUP' | translate}}"></md-button>
+
+                    
+                </div>
+              </div>
+          </form>
+        </md-card-content>
+        </md-card>
+      </md-content>
+  </div>
+</div>
